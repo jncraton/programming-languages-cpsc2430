@@ -1,5 +1,5 @@
-CPSC 4100 Advanced Databases
-============================
+CPSC 2430 Programming Languages and Compilers
+=============================================
 
 !INCLUDE "head.md"
 
@@ -26,7 +26,7 @@ Upon completion of this course, students will be able to:
 
 - Describe the details of the compilation process
 - Articulate the strengths, weaknesses, and history of various language families
-- Create a basic parser
+- Create a basic language parser
 
 Course Overview
 ---------------
