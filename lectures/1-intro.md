@@ -37,3 +37,8 @@ Introduction
 History of Programming
 ----------------------
 
+Why Languages?
+--------------
+
+![](figures/bin-hello.png)
+
