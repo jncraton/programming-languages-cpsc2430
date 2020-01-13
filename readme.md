@@ -25,8 +25,9 @@ Course objectives
 Upon completion of this course, students will be able to:
 
 - Describe the details of the compilation process
+- Use formal grammars to define aspects of programming languages
 - Articulate the strengths, weaknesses, and history of various language families
-- Create a basic language parser
+- Write programs in imperative, functional, and declarative languages
 
 Course Overview
 ---------------
