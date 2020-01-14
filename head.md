@@ -10,5 +10,5 @@ Office hours
 
 - 10am - 11am Monday - Friday (Decker 353)
 - 3pm - 4pm Monday - Wednesday (Decker 353)
-- 7:30pm - 9:30pm - Thursday ([My house](https://goo.gl/maps/yV57ULXJJubWsCZr7))
+- 7:30pm - 9:30pm - Thursday (<a href="https://goo.gl/maps/yV57ULXJJubWsCZr7" target="_blank">My house</a>)
 - My availability can be found here: [joncraton.com/calendar](https://joncraton.com/calendar)
