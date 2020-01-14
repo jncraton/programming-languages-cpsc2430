@@ -36,7 +36,7 @@ Please refer to Canvas for a list of assignments and detailed grading breakdown.
 
 ### Presentations
 
-Students will complete two presentations over the course of the semester sharing knowledge of specific areas of interest with their peers.
+Students will complete at least one presentation over the course of the semester sharing knowledge of specific areas of interest with their peers.
 
 ### Labs
 
@@ -44,7 +44,7 @@ Students will complete weekly labs using various programming languages and techn
 
 ### Homework/Quizzes
 
-Students will complete appoximately 8 homework assignments covering various topics. Quizzes may also be given as needed and will be counted as homework grades.
+Students will complete at least 4 homework assignments covering various topics. Quizzes may also be given as needed and will be counted as homework grades.
 
 ### Exams
 
