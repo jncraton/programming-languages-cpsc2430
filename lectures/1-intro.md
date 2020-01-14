@@ -37,6 +37,19 @@ Introduction
 History of Programming
 ----------------------
 
+- 25th Century BC - Abacus (Babylon)
+- 5th Century BC - Pāṇinian grammar (India)
+- 1st Century BC - Antikythera mechanism (Greece)
+- 12th Century - Castle Clock (Arab World)
+
+---
+
+![First computer program? (Ada Lovelace, 1840)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/640px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg)
+
+---
+
+> In Babbage's world his engines were bound by number...what Ada Byron saw—was that number could represent entities other than quantity. So once you had a machine for manipulating numbers, if those numbers represented other things, letters, musical notes, then the machine could manipulate symbols of which number was one instance
+
 ---
 
 ![A Bombe used for Enigma decryption](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Wartime_picture_of_a_Bletchley_Park_Bombe.jpg/541px-Wartime_picture_of_a_Bletchley_Park_Bombe.jpg)
@@ -44,6 +57,10 @@ History of Programming
 ---
 
 ["Programming" scene from The Imitation Game](https://www.youtube.com/watch?v=pmEXNaWFGYQ&t=262s)
+
+---
+
+![ENIAC - first general purpose computer](https://upload.wikimedia.org/wikipedia/commons/3/3b/Two_women_operating_ENIAC.gif)
 
 ---
 
