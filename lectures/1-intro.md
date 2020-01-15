@@ -49,6 +49,11 @@ Programming Paradigms
 Course Server Information
 =========================
 
+Personal System Use
+-------------------
+
+You are welcome to use your personal system for any assignments, but I will not help with setting up environments beyond pointing you to official documentation.
+
 Lovelace
 --------
 
@@ -67,11 +72,6 @@ Notes
 
 - The server should be stable, but I'm not running any backups and the server will be wiped at the end of the term.
 - Your files in your home directory *should* be private, but please don't try to break into other students work.
-
-Personal System Use
--------------------
-
-You are welcome to use your personal system for any assignments, but I will not help with setting up environments beyond pointing you to official documentation.
 
 Introduction
 ============
