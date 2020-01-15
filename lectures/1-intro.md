@@ -46,6 +46,33 @@ Programming Paradigms
 - 11 - Functional Programming (JS)
 - 12 - Declarative Programming (SQL)
 
+Course Server Information
+=========================
+
+Lovelace
+--------
+
+- Many programming languages and utilities are pre-installed
+- If there are common tools that you'd like installed for everyone, let me know
+- PRs for packages can also be submitted to [this file](https://github.com/jncraton/ubuntu-server-student-env/blob/master/envsetup)
+
+Connection Details
+------------------
+
+- 10.73.56.26 (ssh)
+- Initial passwords are "Password1"
+
+Notes
+-----
+
+- The server should be stable, but I'm not running any backups and the server will be wiped at the end of the term.
+- Your files in your home directory *should* be private, but please don't try to break into other students work.
+
+Personal System Use
+-------------------
+
+You are welcome to use your personal system for any assignments, but I will not help with setting up environments beyond pointing you to official documentation.
+
 Introduction
 ============
 
