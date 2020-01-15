@@ -1,5 +1,20 @@
+Programming Languages and Compilers
+===================================
+
+Introductions
+-------------
+
+- Who am I?
+- What are you hoping to learn from this class?
+
+Syllabus
+--------
+
+[Link](https://cpsc2430-programming-languages.netlify.com/)
+
 Course Overview
 ===============
+
 
 Introduction
 ------------
@@ -33,6 +48,11 @@ Programming Paradigms
 
 Introduction
 ============
+
+What is a computer?
+-------------------
+
+[A bunch of rocks](https://imgs.xkcd.com/comics/a_bunch_of_rocks.png)
 
 History of Programming
 ----------------------
