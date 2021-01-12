@@ -44,7 +44,7 @@ Students will complete weekly labs using various programming languages and techn
 
 ### Homework/Quizzes
 
-Students will complete at least 4 homework assignments covering various topics. Quizzes may also be given as needed and will be counted as homework grades.
+Regular quizzes will be given covering the lecture material. Students will have two attempts on each quiz, one at the start of class and one at the end. Only the highest score will be kept. The lowest quiz score from the semester will not count toward the final grade. Students will also complete homework assignments covering various topics from the course text.
 
 ### Exams
 
