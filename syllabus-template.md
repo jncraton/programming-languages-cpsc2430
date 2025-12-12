@@ -12,11 +12,12 @@ syntax and lexical analysis, language design choices, and design of compilers.
 Required Resources
 ------------------
 
-- [Programming Language Pragmatics. Scott, M.](https://www.worldcat.org/title/programming-language-pragmatics/oclc/970549610)
+- [Course Lecture Notes](https://jncraton.github.io/programming-languages-cpsc2430/lectures/)
 
 Optional Resources
 ------------------
 
+- [Programming Language Pragmatics. Scott, M.](https://www.worldcat.org/title/programming-language-pragmatics/oclc/970549610)
 - [Clean Code. Martin, R.C.](https://www.worldcat.org/title/clean-code-a-handbook-of-agile-software-craftmanship/oclc/968264214)
 
 Course objectives
