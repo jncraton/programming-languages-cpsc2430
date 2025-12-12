@@ -96,6 +96,7 @@ update:
 	           https://raw.githubusercontent.com/jncraton/course-template/master/tail.md \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/env.md \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/style.css \
+	           https://raw.githubusercontent.com/jncraton/course-template/master/filters.lua \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/revealjs-template.html \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/gen_dates.py \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/gen_lecture_index.py \
