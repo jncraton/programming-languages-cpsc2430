@@ -1,0 +1,14 @@
+{
+  "start_date": "2025-08-25",
+  "end_date": "2025-12-05",
+  "lecture_days": "MTW",
+  "lab_days": "R",
+  "breaks": [
+    "2025-09-01 Labor Day",
+    "2025-10-16 Fall Break",
+    "2025-10-17 Fall Break",
+    "2025-11-26 Thanksgiving Break",
+    "2025-11-27 Thanksgiving Break",
+    "2025-11-28 Thanksgiving Break"
+  ]
+}
