@@ -1,4 +1,7 @@
+*.pdf
 labs/*
+resources/*
+roster/*
 readme-template.md
 syllabus*
 lectures/*.html
