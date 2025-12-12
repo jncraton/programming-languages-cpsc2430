@@ -1,5 +1,10 @@
-CPSC 2430 Programming Languages and Compilers
-=============================================
+Programming Languages and Compilers
+===================================
+
+Anderson University
+
+Course Number
+  ~ CPSC 2430
 
 !INCLUDE "head.md"
 

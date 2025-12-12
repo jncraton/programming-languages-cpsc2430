@@ -1,5 +1,7 @@
-CPSC 2430 Programming Languages and Compilers
-=============================================
+Programming Languages and Compilers
+===================================
+
+Anderson University, CPSC 2430
 
 Term
   ~ Fall 2025
