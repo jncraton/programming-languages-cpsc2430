@@ -41,8 +41,7 @@ Schedule a meeting during office hours: [joncraton.com/meet](https://joncraton.c
 Course Catalog Description
 --------------------------
 
-A survey of programming languages and methods of translation. Topics include programming paradigms, language
-syntax and lexical analysis, language design choices, and design of compilers.
+A survey of programming languages and methods of translation. Topics include programming paradigms, language syntax and lexical analysis, language design choices, and design of compilers.
 
 Required Resources
 ------------------
