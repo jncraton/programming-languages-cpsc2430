@@ -1,14 +1,16 @@
 {
-  "start_date": "2025-08-25",
-  "end_date": "2025-12-05",
+  "start_date": "2026-01-14",
+  "end_date": "2026-05-01",
   "lecture_days": "MTW",
   "lab_days": "R",
   "breaks": [
-    "2025-09-01 Labor Day",
-    "2025-10-16 Fall Break",
-    "2025-10-17 Fall Break",
-    "2025-11-26 Thanksgiving Break",
-    "2025-11-27 Thanksgiving Break",
-    "2025-11-28 Thanksgiving Break"
+    "2026-01-19 MLK",
+    "2026-03-09 Spring Break",
+    "2026-03-10 Spring Break",
+    "2026-03-11 Spring Break",
+    "2026-03-12 Spring Break",
+    "2026-03-13 Spring Break",
+    "2025-04-03 Good Friday",
+    "2025-04-06 Easter Monday"
   ]
 }
