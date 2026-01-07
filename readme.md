@@ -7,7 +7,7 @@ Course Number
   ~ CPSC 2430
 
 Term
-  ~ Fall 2025
+  ~ Spring 2026
 
 Instructor
   ~ Jon Craton
