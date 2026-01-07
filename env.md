@@ -1,15 +1,15 @@
 Programming Environment Requirements
 ====================================
 
-Laptops are required for all CPSC courses and should be available in the classroom each day.
+Laptops are required for all computer science courses and should be available in the classroom each day.
 
 Unless otherwise specified, programming assignments for this course have been tested to work in an environment similar to the following:
 
-- Linux kernel version: 5.10
-- Architecture: [x64](https://en.wikipedia.org/wiki/X86-64)
-- `python` version: 3.9
-- `gcc` version: 10.2
-- `make` version: 4.3
+- Linux kernel version (`uname -r`): 5.15
+- Architecture (`uname -m`): [x86_64](https://en.wikipedia.org/wiki/X86-64)
+- `python --version`: 3.10
+- `gcc --version` version: 11.4
+- `make --version` version: 4.3
 
 While assignments are generally designed to work in a wide variety of environments, it is strongly recommended to have an environment as close to the one described above as possible. If you do not run x64 Linux natively on your machine, a virtualized environment can be used via tools such as [QEMU](https://www.qemu.org/), [virt-manager](https://virt-manager.org/), or [VirtualBox](https://www.virtualbox.org/).
 
@@ -17,7 +17,7 @@ It is recommended to install a Debian-based distribution such as Debian itself, 
 
 The following are explicitly unsupported:
 
-- Python versions prior to 3.8, as these are [no longer officially supported](https://devguide.python.org/versions/).
+- Python versions prior to 3.10, as these are [no longer officially supported](https://devguide.python.org/versions/).
 - Any compiled programs for architectures other than x64. If you are using a machine with a different architecture, you will need a virtualized x64 environment.
 
 Setup Notes
@@ -36,7 +36,7 @@ You may choose to run Linux in the cloud rather than on your own machine if desi
 ARM Mac Setup
 -------------
 
-M1 and M2 Macs may be especially challenging due to not all software being ported to the architecture yet. The following should work to run an x64 VM using QEMU.
+ARM Macs may be especially challenging due to not all software being ported to the architecture yet. The following should work to run an x64 VM using QEMU.
 
 1. Install Homebrew (`brew`) if you have not already done so by running the following command:
 
