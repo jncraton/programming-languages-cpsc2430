@@ -52,6 +52,7 @@ Optional Resources
 ------------------
 
 - [Programming Language Pragmatics. Scott, M.](https://www.worldcat.org/title/programming-language-pragmatics/oclc/970549610)
+- [Structure and Interpretation of Computer Programs. Abelson, H. Sussman, J.](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 - [Clean Code. Martin, R.C.](https://www.worldcat.org/title/clean-code-a-handbook-of-agile-software-craftmanship/oclc/968264214)
 
 Course objectives
