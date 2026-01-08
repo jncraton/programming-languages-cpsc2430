@@ -1,5 +1,4 @@
-Control Flow
-============
+# Control Flow
 
 ---
 
@@ -7,13 +6,11 @@ Chapter 6
 
 ---
 
-Control Flow
-------------
+## Control Flow
 
 Dictates the order of program execution
 
-Unstructured Flow
------------------
+## Unstructured Flow
 
 - Control flow is achieved using low-level constructs such as conditional branches and gotos
 - Common in assembly languages and some other early languages
@@ -27,21 +24,18 @@ if (A .lt. B) goto 10
 10 ...
 ```
 
-Structured Flow
----------------
+## Structured Flow
 
 - Gotos begin to be considered evil in the 60s
 - We seek better tools to solve control flow problems
 - Examples include `if`, `then`, `else` and `for`
 
-Multi-level Returns
--------------------
+## Multi-level Returns
 
 - One "advantage" of goto is that it can jump anywhere in a program, not simply return to the caller
 - Sometimes we want to jump outside of our immediate context, and multilevel returns can allow this
 
-Exceptions
-----------
+## Exceptions
 
 - Exception handling is one example of a non-local return
 - Execution moves from the point where the exception was raised to the point where the exception is handled
@@ -63,26 +57,22 @@ except ValueError:
   print('All numbers are not positive')
 ```
 
-Sequencing
-----------
+## Sequencing
 
 - Core to imperative programming
 - Determines order of side effects such as assignment
 
-Compound Statement
-------------------
+## Compound Statement
 
 - An ordered list of statements that can be used where statements are expected
-- Sometimes called *blocks*
+- Sometimes called _blocks_
 
-Selection
----------
+## Selection
 
 - Provide a way to select one set of statements based on a condition
 - e.g. `if` or `switch`
 
-Short-circuit Evaluation
-------------------------
+## Short-circuit Evaluation
 
 - Most modern languages will skip evaluating unneeded arguments in boolean expressions
 - This creates more efficient programs
@@ -92,7 +82,8 @@ Short-circuit Evaluation
 
 ```js
 function check_value(obj) {
-  if (obj && obj.val) { // Confirms that obj is defined
+  if (obj && obj.val) {
+    // Confirms that obj is defined
     console.log('Value is set')
   } else {
     console.log('Value is unset')
@@ -100,11 +91,10 @@ function check_value(obj) {
 }
 
 check_value()
-check_value({'val':1})
+check_value({ val: 1 })
 ```
 
-Switch Statements
------------------
+## Switch Statements
 
 - More efficient in hardware than nested conditionals
 - Creates a jump table that transfers execution in a single instruction
@@ -130,15 +120,13 @@ int main(void) {
 }
 ```
 
-Iteration
----------
+## Iteration
 
 - Allows computers to perform the same task repeatedly
 - Makes computers useful for more than fixed-size tasks
 - Without some mechanism of iteration or recursion, runtime is linearly coupled to program size
 
-Logically Controlled Loops
---------------------------
+## Logically Controlled Loops
 
 - Run a block of code multiple times
 - A condition may be used to stop execution
@@ -159,8 +147,7 @@ int main(void) {
 }
 ```
 
-Enumeration-Controlled Loops
-----------------------------
+## Enumeration-Controlled Loops
 
 - Executed once for every value in a finite set
 - e.g. `for` loop
@@ -182,8 +169,7 @@ for i in range(1, 10, 2):
   ...
 ```
 
-For loop code generation
-------------------------
+## For loop code generation
 
 ```asm
 mov first, r1
@@ -199,14 +185,12 @@ check:
   jl body
 ```
 
-Semantic Complications
-----------------------
+## Semantic Complications
 
 - Many languages e.g. C allow complex expressions in for loop control conditions
 - Machine code for `for` loops must often be more complex, as loop count can't be easily predicted
 
-Recursion
----------
+## Recursion
 
 - We can use nested function calls to perform tasks repeatedly
 - This can be more readable than iterative solutions
@@ -225,8 +209,7 @@ def prime_factors(num):
 print(prime_factors(780))
 ```
 
-Recursive optimizations
------------------------
+## Recursive optimizations
 
 - Some compilers will optimize recursion into iteration removing the need for new stack frames
 - In this case, recursion is very efficient
@@ -256,8 +239,7 @@ def factorial(n, accum=1):
 print(factorial(5))
 ```
 
-Tail Recursion
---------------
+## Tail Recursion
 
 - No computation takes place after the recursive call
 - Can be computed using constant space

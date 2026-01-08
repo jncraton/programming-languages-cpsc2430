@@ -1,5 +1,4 @@
-Functional Languages
-====================
+# Functional Languages
 
 ---
 
@@ -16,13 +15,11 @@ Chapter 11
 
 In modern languages, the lines between language families and often have a lot of overlap.
 
-First-class Functions
----------------------
+## First-class Functions
 
 - Functions can be passed as values
 
-Higher Order Functions
-----------------------
+## Higher Order Functions
 
 Functions that accept functions as parameters
 
@@ -32,8 +29,7 @@ Functions that accept functions as parameters
 setTimeout(() => console.log('1 second has passed'), 1000)
 ```
 
-Each
-----
+## Each
 
 - Executes a function on each item in a list
 - Returns nothing
@@ -41,19 +37,18 @@ Each
 ---
 
 ```js
-[1,2,3].forEach((i) => console.log(i))
+;[1, 2, 3].forEach(i => console.log(i))
 ```
 
 ---
 
 ```js
-for (i of [1,2,3]) {
+for (i of [1, 2, 3]) {
   console.log(i)
 }
 ```
 
-Map
----
+## Map
 
 - Executes a function on each item in a list
 - Returns a new list of the results
@@ -62,11 +57,10 @@ Map
 
 ```js
 // Square a list
-[1,2,3].map((i) => i*i)
+;[1, 2, 3].map(i => i * i)
 ```
 
-Filter
-------
+## Filter
 
 - Executes a function on each item in a list
 - Returns a new list containing only items where the function evaluated to true
@@ -75,11 +69,10 @@ Filter
 
 ```js
 // Remove negative numbers
-[-1,0,1,2].filter((i) => i >= 0)
+;[-1, 0, 1, 2].filter(i => i >= 0)
 ```
 
-Every
------
+## Every
 
 - Executes a function on every item in a list
 - Returns true if the function always evaluates to true
@@ -88,11 +81,10 @@ Every
 
 ```js
 // Confirm that all values are positive
-[1,2,3].every((i) => i > 0)
+;[1, 2, 3].every(i => i > 0)
 ```
 
-Reduce
-------
+## Reduce
 
 - Executes a function on each item in a list and accumulates a single value
 - Returns the final accumulated value
@@ -101,11 +93,10 @@ Reduce
 
 ```js
 // Sum values in a list
-[1,2,3].reduce((i, a) => i + a, 0)
+;[1, 2, 3].reduce((i, a) => i + a, 0)
 ```
 
-Purity
-------
+## Purity
 
 - A function is said to be "pure" if it has no side effects
 - Side effects may inlcude changing global state or performing I/O
@@ -122,8 +113,7 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 ```
 
-Memoization
------------
+## Memoization
 
 - We can sometimes optimize the performance of pure functions by caching their outputs
 
@@ -141,38 +131,32 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 ```
 
-History
--------
+## History
 
-Lambda Calculus
----------------
+## Lambda Calculus
 
 - Formal mathematical basis for computation introduced by Alonozo Church
 - Provably equivalent to a Turing Machine (see Church-Turing thesis)
 - Not a programming language, but provides framework for computation and functional programming
 
-Lisp
-----
+## Lisp
 
 - First functional langauge (1958)
 - Designed by John McCarthy and implemented by others (Steve Russell created the first working interpreter)
 - Lisp is still used today in various forms (Scheme, Common Lisp, Clojure, etc)
 - Lisp influenced many other modern languages (JavaScript, Python, Ruby, etc)
 
-Miranda and Haskell
--------------------
+## Miranda and Haskell
 
 - Emerged in the 80s as modern functional languages
 - Haskell is open and used for functional programming research
 
-Python
-------
+## Python
 
 - Emerged in 1991 and was heavily influenced by Haskell
 - Multi-paradigm language incorporating ideas from various programming languages
 
-JavaScript
-----------
+## JavaScript
 
 - Created in 1995
 - Brendan Eich was hired by Mozilla to implement Scheme for use in web pages
@@ -180,5 +164,4 @@ JavaScript
 - Glue language with Java syntax
 - Includes first-class functions and closures
 
-JS Example
-----------
+## JS Example

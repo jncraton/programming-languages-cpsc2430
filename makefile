@@ -121,7 +121,7 @@ update:
 	make readme.md
 
 format:
-	npx prettier@3.6.2 --write **.md style.css
+	npx prettier@3.6.2 --write **.md lectures/**.md style.css
 	pipx run --spec black==25.12.0 black gen_lecture_index.py gen_dates.py
 
 clean:

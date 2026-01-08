@@ -1,22 +1,17 @@
-Programming Languages and Compilers
-===================================
+# Programming Languages and Compilers
 
-About Me
---------
+## About Me
 
 Professor Craton
 
 Anything you want to know?
 
-
-Introductions
--------------
+## Introductions
 
 - Name
 - What are you hoping to learn from this class?
 
-Syllabus
---------
+## Syllabus
 
 [Link](https://cpsc2430-programming-languages.netlify.com/)
 
@@ -24,29 +19,24 @@ Syllabus
 
 ![Maslow's Hierarchy of Needs](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/MaslowsHierarchyOfNeeds.svg/640px-MaslowsHierarchyOfNeeds.svg.png)
 
-Syllabus
---------
+## Syllabus
 
 [Link](../syllabus.html)
 
-Quizzes
--------
+## Quizzes
 
 - Given regularly at beginning and end of class
 - Should be easy for you
 - Allow me to confirm that everyone is keeping up with course material
 
-Course Overview
-===============
+# Course Overview
 
-Introduction
-------------
+## Introduction
 
 - 1.1 - 1.3 Why programming languages?
 - 1.4 - 1.6 Compilation vs Interpretation
 
-Foundations
------------
+## Foundations
 
 - 2.1 - 2.2 Lexing (aka Tokenizing, Scanning)
 - 2.3 - 2.5 Parsing - ASTs, Language Hierarchy
@@ -54,23 +44,20 @@ Foundations
 - 3.3 - 3.6 Scope and Closures
 - 5 - Target Machine Architecture
 
-Language Design
----------------
+## Language Design
 
 - 6 - Control Flow
 - 7 - Type systems
 - 8 - Composite Types
 - 9 - Subroutines and Control Abstraction
 
-Programming Paradigms
----------------------
+## Programming Paradigms
 
 - 10 - Object Oriented Programming (Python)
 - 11 - Functional Programming (JS)
 - 12 - Declarative Programming (SQL)
 
-Course Software
-===============
+# Course Software
 
 ---
 

@@ -1,5 +1,4 @@
-Closing Thoughts and Review
-===========================
+# Closing Thoughts and Review
 
 ---
 

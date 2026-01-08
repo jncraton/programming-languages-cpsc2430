@@ -1,18 +1,16 @@
 Enum lab questions?
 
-Free Vaccines Tomorrow
-----------------------
+## Free Vaccines Tomorrow
 
 - Over 350 students and faculty are signed up
 - You can still [sign up](https://www.signupgenius.com/go/5080a48a4ac22a2f85-covid19) (Walkins welcome)
 - 10am to 1pm in Reardon lobby
 
 > It is a great vaccine. It is a safe vaccine, and it is something that works.
-> 
+>
 > – Donald Trump ([source](https://www.foxnews.com/media/trump-urges-all-americans-to-get-covid-vaccine-its-a-safe-vaccine), also [CDC](https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/safety-of-vaccines.html))
 
-Control Abstraction
-===================
+# Control Abstraction
 
 ---
 
@@ -20,62 +18,50 @@ Chapter 9
 
 ---
 
-Abstraction
------------
+## Abstraction
 
 - Allows us to hide complexity behind simpler interfaces
 
-Data Abstraction
-----------------
+## Data Abstraction
 
 - Create complex data structures with simple interfaces to pass around (e.g. records, structs, dictionaries, etc)
 
-Control Abstaction
-------------------
+## Control Abstaction
 
 - Create organized sections of executable code that execute in well-understood ways and can be reused
 
-Subroutine
-----------
+## Subroutine
 
 - Performs operations for the caller while the caller waits
-- Arguments, or *actual parameters*, are passed to subroutines and mapped to *formal parameters* from the subroutine definition
-- Subroutines that can return values can be called *functions*
+- Arguments, or _actual parameters_, are passed to subroutines and mapped to _formal parameters_ from the subroutine definition
+- Subroutines that can return values can be called _functions_
 
-Call Stack
-----------
+## Call Stack
 
 - Memory space for functions to use to store local variables, return addresses, and other data
 - Function calls push a new frame to the stack
 - Returns pop their frame when they are finished with it
 
-Call stack review resources
----------------------------
+## Call stack review resources
 
 - [Short Video Lecture](https://www.youtube.com/watch?v=Q2sFmqvpBe0)
 - [Wikipedia](https://en.wikipedia.org/wiki/Call_stack)
 
-Parameter Passing
------------------
+## Parameter Passing
 
-
-
-Pass by Value
--------------
+## Pass by Value
 
 - Actual parameter values are made available to the subroutine
 - Modification of values will not impact the caller
 - This may involved making a copy in memory
 
-Pass by Reference
------------------
+## Pass by Reference
 
 - Actual parameters are references to data from the caller
 - Modifaction of values will impact caller
 - Should not involve copying data
 
-C
----
+## C
 
 - Pass by value
 
@@ -137,8 +123,7 @@ int main(void) {
 }
 ```
 
-Python
-------
+## Python
 
 - Pass by object reference
 - Numbers and strings are passed by value
@@ -191,8 +176,7 @@ print(mylist)
 
 Immutable objects (such as tuples or strings) can't be modified for the caller
 
-Optional Parameters
--------------------
+## Optional Parameters
 
 - Some languages allow us to mark parameters as optional
 - We may be able to provide a default value
@@ -220,14 +204,13 @@ function print(a) {
   console.log(a)
 }
 
-print("Hello, World!")
+print('Hello, World!')
 print() // This is not an error in JS
 ```
 
-Named Parameters
-----------------
+## Named Parameters
 
-- We've been exploring *positional* parameters
+- We've been exploring _positional_ parameters
 - Some languages allow them to be used by name
 - This can be very helpful, especially combined with optional parameters
 
@@ -237,11 +220,10 @@ Named Parameters
 def make_vehicle(type='car', color='red', max_speed=55):
   return (type, color, max_speed)
 
-print(make_car(color='blue')) 
+print(make_car(color='blue'))
 ```
 
-Variable Numbers of Arguments
------------------------------
+## Variable Numbers of Arguments
 
 - It can sometimes be helpful to accept a different number of arguments
 - One example of this is `printf` in C
@@ -254,8 +236,7 @@ int printf ( const char * format, ... );
 
 ---
 
-Function Returns
-----------------
+## Function Returns
 
 - End the function
 - Return some value
@@ -274,14 +255,12 @@ fn main() {
 }
 ```
 
-Events
-------
+## Events
 
 - Event happens outside of program at unpredictable times
 - Running programs wants to respond
 
-Blocking
---------
+## Blocking
 
 - We simply wait for an event to complete
 
@@ -310,31 +289,27 @@ for food in junk_foods:
 ---
 
 ```js
-const https = require('https');
+const https = require('https')
 
-junk_foods = [
-  'Pizza',
-  'Popcorn',
-  'Hamburger',
-  'Pepsi',
-  'Potato_chip',
-  'Cake',
-]
+junk_foods = ['Pizza', 'Popcorn', 'Hamburger', 'Pepsi', 'Potato_chip', 'Cake']
 
 url = 'https://en.wikipedia.org/w/api.php?action=parse&format=json&page='
 
-junk_foods.forEach((food) => {
-    https.get({
-        host: 'en.wikipedia.org',
-        path: '/w/api.php?action=parse&format=json&page=' + food
-    }, function(res) {
-        let body = ''
-        res.on('data', function(d) {
-            body += d
-        })
-        res.on('end', function() {
-            console.log(`${food}: ${JSON.parse(body).parse.properties[0]['*']}`)
-        })
-    })
+junk_foods.forEach(food => {
+  https.get(
+    {
+      host: 'en.wikipedia.org',
+      path: '/w/api.php?action=parse&format=json&page=' + food,
+    },
+    function (res) {
+      let body = ''
+      res.on('data', function (d) {
+        body += d
+      })
+      res.on('end', function () {
+        console.log(`${food}: ${JSON.parse(body).parse.properties[0]['*']}`)
+      })
+    },
+  )
 })
 ```

@@ -1,49 +1,43 @@
 Lexing lab questions?
 
-Parsing 2.3
-===========
+# Parsing 2.3
 
 ---
 
 > Parsing or syntax analysis is the process of analyzing a string of symbols conforming to the rules of a formal grammar.
 
-Calculator Example
-------------------
+## Calculator Example
 
-Supported operations
---------------------
+## Supported operations
 
 - `1 + 2`
 - `4 - 2`
 - `2 * 3`
 - `8 / 4`
 
-Goal
-----
+## Goal
 
-- Scan a string such as "1 + 2 * 3" and determine if it is a valid operation, and order it so it can be executed.
+- Scan a string such as "1 + 2 \* 3" and determine if it is a valid operation, and order it so it can be executed.
 
-Chomsky Hierarchy
------------------
+## Chomsky Hierarchy
 
-Grammar       Automaton (Computer)
-------------- ----------------------
-Unrestricted  Turing Machines
-Context Free  Pushdown Automata
-Regular       Finite State Automata
+Grammar Automaton (Computer)
 
-Context-free Languages
-----------------------
+---
 
-Big Idea
---------
+Unrestricted Turing Machines
+Context Free Pushdown Automata
+Regular Finite State Automata
+
+## Context-free Languages
+
+## Big Idea
 
 - Grammar rules are applied recursively to generate members of the language.
 - Grammar rules can be applied in reverse to parse a string to determine language membership.
 - The parsing process can result in a parse tree showing token structure.
 
-English Example
----------------
+## English Example
 
 - S -> NP VP
 - NP -> Adj Noun
@@ -55,16 +49,13 @@ English Example
 
 ![Parse tree](https://connectiongrammar.netlify.com/docs/english-parse-example.png)
 
-Implementing a parser
----------------------
+## Implementing a parser
 
 ---
 
 ![Parse tree example](https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Parse_Tree_Example.svg/525px-Parse_Tree_Example.svg.png)
 
-
-Top-down parsing
-----------------
+## Top-down parsing
 
 - Begins with overall structure (sometimes guessed or assumed) and then determines details
 - Top-down refers to order in which nodes in the final parse tree are determined
@@ -73,8 +64,7 @@ Top-down parsing
 
 ![Top-down parse](https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Top-down_Parse_Tree_Order.svg/495px-Top-down_Parse_Tree_Order.svg.png)
 
-Bottom-up parsing
------------------
+## Bottom-up parsing
 
 - Determines low-level details first then builds our surrounding structure.
 
@@ -82,23 +72,20 @@ Bottom-up parsing
 
 ![Bottom-up parse](https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Bottom-up_Parse_Tree_Order.svg/501px-Bottom-up_Parse_Tree_Order.svg.png)
 
-Shift-reduce parsing
---------------------
+## Shift-reduce parsing
 
 - Bottom-up
 - Shifts tokens onto a stack
 - Reduces them when they match against a rule
 
-LR Parsing
-----------
+## LR Parsing
 
 - Shift-reduce, bottom-up parse
 - Left-to-right, Rightmost derivation first
 - Deterministic algoritm
 - Linear time performance
 
-Calculator Grammar
-------------------
+## Calculator Grammar
 
 There is just one rule:
 
@@ -106,7 +93,6 @@ There is just one rule:
 
 This rule can generate all strings that are a member of the language.
 
-Tokens
-------
+## Tokens
 
 Note that we are currently operating on tokens. We would need additional rules to operate directly on strings, but the lexer has already taken care of ensuring that we only have valid tokens.

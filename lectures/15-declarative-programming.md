@@ -1,8 +1,6 @@
-Declarative Languages
-=====================
+# Declarative Languages
 
-Declarative Programming
------------------------
+## Declarative Programming
 
 We express the logic of our program without specifying its control flow
 
@@ -11,16 +9,14 @@ We express the logic of our program without specifying its control flow
 - Declarative - Focuses on the what
 - Imperative - Focuses on the how
 
-Examples
---------
+## Examples
 
 - Logic langauges
 - Purely functional languages
 - Query langauges
 - Domain specific languages
 
-Logic Programming
------------------
+## Logic Programming
 
 - Uses formal logic to solve problems
 - Programs are made up of facts and rules
@@ -29,17 +25,16 @@ Logic Programming
 ---
 
 ```prolog
-factorial(0,1). 
+factorial(0,1).
 
-factorial(N,F) :-  
-   N>0, 
-   N1 is N-1, 
-   factorial(N1,F1), 
+factorial(N,F) :-
+   N>0,
+   N1 is N-1,
+   factorial(N1,F1),
    F is N * F1.
 ```
 
-Query Lanugages
----------------
+## Query Lanugages
 
 - You've likely already encountered SQL
 - This languages allows us to frame requests for data in terms of the data we want, not how it will be retrieved
@@ -64,8 +59,8 @@ create table users (
   userid integer primary key,
   name text
 );
-insert into users values 
-  (1,'Alice'), 
+insert into users values
+  (1,'Alice'),
   (2,'Bob'),
   (3,'Carol'),
   (4,'Dan'),
@@ -77,7 +72,7 @@ create table messages (
   userid integer,
   content text
 );
-insert into messages values 
+insert into messages values
   (2,'Does anyone know how modify a record in a SQL DB?'),
   (6,'Everyone knows how to do this'),
   (3,'Have you tried `UPDATE`?'),
@@ -94,38 +89,38 @@ insert into messages values
 
 select "
   Display messages in order";
-select userid, content 
+select userid, content
   from messages;
 
 
 select "
   Display messages with usernames";
 
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users;
 
 select "
   Display messages with usernames in reverse order";
 
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users
   order by messages.rowid desc;
 
 select "
   Show Dan's messages using a `where` clause";
 
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users
   where name='Dan';
 
 select "
   Show query plan (imperative program to complete query)";
 explain query plan
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users
   where name='Dan';
 
@@ -137,8 +132,8 @@ create index users_name_idx on users(name);
 select "
   Show new query plan";
 explain query plan
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users
   where name='Dan';
 
@@ -150,8 +145,8 @@ update users
   set name = 'Dave'
   where name = 'Dan';
 
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users;
 
 select "
@@ -159,18 +154,18 @@ select "
 
 delete from messages
   where userid = (
-    select userid 
-    from users 
+    select userid
+    from users
     where name = 'Eve'
   );
 
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users;
 
 
-/* 
-Lab Excercises 
+/*
+Lab Excercises
 
 You should be able to complete these using the same techniqes
 as above, but you if need a place to start to refresh you SQL
@@ -191,7 +186,7 @@ select "
 select "
   Delete Frank's messages";
 
-/* 
+/*
 You have nothing to do after this point
 
 We just show all messages here so you can easily see your changes
@@ -199,16 +194,14 @@ We just show all messages here so you can easily see your changes
 
 select "
   Final message list";
-select name, content 
-  from messages 
+select name, content
+  from messages
   natural join users;
 ```
 
-Domain Specific Languages
--------------------------
+## Domain Specific Languages
 
-Make
-----
+## Make
 
 - The language that you've used to create makefiles is declarative
 - You aren't telling make what to do to build your program
@@ -223,8 +216,7 @@ main: main.c
   gcc main.c -o main
 ```
 
-CSS
----
+## CSS
 
 - Declarative DSL used to provide style information
 - Describes what style an element should have without specifying how to apply it.
@@ -233,19 +225,17 @@ CSS
 
 ```css
 body {
-  max-width:960px;
+  max-width: 960px;
 }
 h1 {
-  font-size:36px;
+  font-size: 36px;
 }
 nav {
-  background-color:blue;
+  background-color: blue;
 }
 ```
 
-
-Hardware Description Languages
-------------------------------
+## Hardware Description Languages
 
 Language used to describe the behavior of electronic circuits.
 
@@ -255,7 +245,7 @@ Language used to describe the behavior of electronic circuits.
 entity adder is
        port (i0, i1 : in std_logic; ci : in std_logic; s : out std_logic; co : out std_logic);
      end adder;
-     
+
      architecture rtl of adder is
      begin
         s <= (i0 xor i1 xor ci) after 35 ps;

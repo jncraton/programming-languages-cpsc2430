@@ -1,5 +1,4 @@
-Binding
-=======
+# Binding
 
 ---
 
@@ -7,38 +6,32 @@ Section 3.1
 
 ---
 
-Names
------
+## Names
 
 - A mnemonic character string used to represent something else
 - Can refer to variables, constants, types, functions, etc
-- Allow programmers to *abstract* complexity (e.g. memory addresses)
+- Allow programmers to _abstract_ complexity (e.g. memory addresses)
 
-Abstraction
------------
+## Abstraction
 
 - Hiding details to create clearer interfaces
 
-Control Abstractions
---------------------
+## Control Abstractions
 
 - Hide complex executable code
 - Functions, subroutines, and certain macros are examples
 
-Data Abstractions
------------------
+## Data Abstractions
 
 - Hide data representation details behind simpler operations
 - Examples are classes and structs
 
-Binding Time
-------------
+## Binding Time
 
 - A binding is an association between two things
 - Binding time refers to the point when the association is created
 
-Possible Binding Times
-----------------------
+## Possible Binding Times
 
 - Language design time
 - Program writing time
@@ -46,31 +39,26 @@ Possible Binding Times
 - Link time
 - Run time
 
-Performance
------------
+## Performance
 
 - As a general rule, making decisions earlier will make final programs more efficient
 - Earlier binding times generally improve efficiency
 
-Compile/Link Time
------------------
+## Compile/Link Time
 
 - Bindings are finalized as one of the last steps of the build process
 
-Run Time
---------
+## Run Time
 
 - Bindings are not finalized by the time the program begins running
 - Bindings may be altered at runtime
 
-Static and Dynamic Binding
---------------------------
+## Static and Dynamic Binding
 
 - Static - any binding determined before runtime
 - Dynamic - any binding determined during runtime
 
-Object Lifetime and Storage
-===========================
+# Object Lifetime and Storage
 
 ---
 
@@ -78,42 +66,36 @@ Section 3.2
 
 ---
 
-Key Events
-----------
+## Key Events
 
 - Creation and destruction of objects
 - Creation and destruction of bindings
 - Deactivation and reactivation of bindings
 
-Lifetime
---------
+## Lifetime
 
 - The period between creation and destruction
 - Object lifetime and binding lifetime may or may not coincide
 
-References
-----------
+## References
 
 - Values passed by reference typically have a longer lifetime than their binding
 - **Dangling references** can occur when a reference outlives the object it points to
 
-Storage Allocation Mechanisms
------------------------------
+## Storage Allocation Mechanisms
 
 - Static - Absolute addresses and exist throughout execution
 - Stack - Allocated and deallocated in LIFO order with matching function calls
 - Heap - Allocated and deallocated at arbitrary times
 
-Static Allocation
------------------
+## Static Allocation
 
 - Global variables
 - Machine code
 - Variables declared `static`
 - Can be used for local variables in certain languages (e.g. early Fortran without recursion)
 
-Stack Allocation
-----------------
+## Stack Allocation
 
 - Must be used for local variables to support recursion
 - Function instances get their own stack frame for local variables and other data
@@ -138,17 +120,15 @@ int main(void) {
 
 [repl.it factorial example](https://repl.it/@jncraton/c-factorial)
 
-Calling Sequence
-----------------
+## Calling Sequence
 
 - Prolog - Executed initially to prepare the stack
 - Epilog - Executed to put state back as it was before the call
 
-Accessing Stack Variables
--------------------------
+## Accessing Stack Variables
 
 - Addresses are not known at compile time
-- A *frame pointer* is created to point to the current stack frame
+- A _frame pointer_ is created to point to the current stack frame
 - Local variable references are offsets to this pointer
 
 ---
@@ -157,43 +137,37 @@ Accessing Stack Variables
 
 ---
 
-Heap Allocation
----------------
+## Heap Allocation
 
 - Required for dynamically allocated data structures
-    - Linked data structures (linked lists, trees, graphs, etc)
-    - Objects of arbitrary size (documents, images, etc)
+  - Linked data structures (linked lists, trees, graphs, etc)
+  - Objects of arbitrary size (documents, images, etc)
 - Heap management is a complex topic
 
-Language Differences
---------------------
+## Language Differences
 
 - Allocation is typically explicit
 - Deallocation is explicit in some language (C,Rust,etc)
-- Some languages specify that deallocation should happen automatically at runtime using *garbage collection*
+- Some languages specify that deallocation should happen automatically at runtime using _garbage collection_
 
-Garbage Collection
-------------------
+## Garbage Collection
 
 - Automatically cleans up objects in memory when they are no longer needed
 - Prevents many common classes of memory bugs
 - Will have some runtime performance cost
 
-Issues Mitigated by Garbage Collection
---------------------------------------
+## Issues Mitigated by Garbage Collection
 
 - Use after free (dangling references box example)
 - Memory leaks
 - Hard to debug as the problem does not trigger an exception at the root cause, but causes problems later
 
-Heap Allocation in C
---------------------
+## Heap Allocation in C
 
 - `malloc` returns a pointer to allocated heap memory
 - `free` frees the memory
 
-Example
--------
+## Example
 
 ```c
 char* ptr;

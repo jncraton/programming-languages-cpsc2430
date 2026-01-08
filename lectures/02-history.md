@@ -1,13 +1,10 @@
-Introduction
-============
+# Introduction
 
-What is a computer?
--------------------
+## What is a computer?
 
 [A bunch of rocks](https://imgs.xkcd.com/comics/a_bunch_of_rocks.png)
 
-History of Programming
-----------------------
+## History of Programming
 
 - 25th Century BC - Abacus (Babylon)
 - 5th Century BC - Pāṇinian grammar (India)
@@ -38,8 +35,7 @@ History of Programming
 
 ![Punch card with Fortran statement](https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/FortranCardPROJ039.agr.jpg/1024px-FortranCardPROJ039.agr.jpg)
 
-Why Languages?
---------------
+## Why Languages?
 
 ---
 
@@ -47,8 +43,7 @@ Why Languages?
 
 ---
 
-Editing Binaries Manually
--------------------------
+## Editing Binaries Manually
 
 ---
 
@@ -66,16 +61,15 @@ Disassembly of section .text:
   4000db:	48 c7 c7 01 00 00 00 	mov    $0x1,%rdi
   4000e2:	48 c7 c6 02 01 40 00 	mov    $0x400102,%rsi
   4000e9:	48 c7 c2 0e 00 00 00 	mov    $0xe,%rdx
-  4000f0:	0f 05                	syscall 
+  4000f0:	0f 05                	syscall
   4000f2:	48 c7 c0 3c 00 00 00 	mov    $0x3c,%rax
   4000f9:	48 c7 c7 00 00 00 00 	mov    $0x0,%rdi
-  400100:	0f 05                	syscall 
+  400100:	0f 05                	syscall
 ```
 
-mov $0x1, %rax
--------------
+## mov $0x1, %rax
 
-### 48 c7 c0 01 00 00 00 	
+### 48 c7 c0 01 00 00 00
 
 - 48 - [REX prefix](https://wiki.osdev.org/X86-64_Instruction_Encoding)
 - c7 - [mov instruction](http://ref.x86asm.net/coder64.html#xC7)
@@ -86,8 +80,7 @@ mov $0x1, %rax
 
 ![Memory hierarchy](https://upload.wikimedia.org/wikipedia/commons/0/0c/ComputerMemoryHierarchy.svg)
 
-16 x64 Registers
--------------
+## 16 x64 Registers
 
 - RAX
 - RBX
@@ -99,17 +92,15 @@ mov $0x1, %rax
 - RBP - Base Pointer
 - R8 - R15
 
-System Calls
-------------
+## System Calls
 
 - Provide a way to call a function in kernel space
 - Examples
-    - read
-    - write
-    - exit
+  - read
+  - write
+  - exit
 
-Example of syscall
-------------------
+## Example of syscall
 
 ```asm
 # exit(0)

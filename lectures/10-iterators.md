@@ -1,7 +1,6 @@
 Lab questions?
 
-Iterators
-=========
+# Iterators
 
 ---
 
@@ -29,8 +28,7 @@ for character in "Hello, World!":
   print(character)
 ```
 
-"True" Iterators
-----------------
+## "True" Iterators
 
 - Many languages provide a way to iterate over objects
 - A true iterator provides a way to iterate without storing intermediate data structures
@@ -47,14 +45,12 @@ for i in [0,1,2,3,4,5,6,7,8,9]:
   print(i)
 ```
 
-Python Iterator
----------------
+## Python Iterator
 
 - Includes an `__iter__` method that returns an iterator
 - Includes a `__next__` method that returns the next item
 
-Duck Typing
------------
+## Duck Typing
 
 - We can identify the type of an object by its properities
 - If it walks like a duck and quacks like a duck, it is a duck
@@ -64,8 +60,7 @@ Duck Typing
 
 Python `range` [implementation](https://replit.com/@jncraton/range#main.py).
 
-Generators
-----------
+## Generators
 
 - Provide a generalized construct for creating iterators
 - We can `yield` successive values

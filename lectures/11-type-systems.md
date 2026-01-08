@@ -1,5 +1,4 @@
-Type Systems
-============
+# Type Systems
 
 ---
 
@@ -7,58 +6,50 @@ Chapters 7 & 8
 
 ---
 
-Purpose
--------
+## Purpose
 
 1. Provide implicit context for operations
 2. Limit the set of valid operations
 3. Explicit types can make code easier to read
 4. Types known at compile time can drive performance optimizations
 
-Constructs with Types
----------------------
+## Constructs with Types
 
 - Anything with a value
-    - Constants
-    - Variables
-    - Parameters
-    - Literals
+  - Constants
+  - Variables
+  - Parameters
+  - Literals
 
-A type system
--------------
+## A type system
 
 1. A mechanism to define types
 2. Set of rules for
-    - Type equivalence
-    - Type compatibility
-    - Type inference
+   - Type equivalence
+   - Type compatibility
+   - Type inference
 
-Type Checking
--------------
+## Type Checking
 
 - The process of ensuring that language type rules are followed
-- Violations are *type clashes*
+- Violations are _type clashes_
 
-Strong Typing
--------------
+## Strong Typing
 
 A language enforces valid types and operations
 
-Static Typing
--------------
+## Static Typing
 
 A language is strongly typed and rules are enforced at compile time
 
-Example Languages
------------------
+## Example Languages
 
 - Javascript - weak/dynamic
 - Python - strong/dynamic
 - C - weak/static (types can be coerced)
 - Java - strong/static
 
-JavaScript
----------
+## JavaScript
 
 - Weakly typed
 - Dynamically typed
@@ -67,10 +58,14 @@ JavaScript
 
 ```js
 // None of these are runtime errors
-"Six" * 6 // NaN
-true * 6 // 6
-[1,2] * 6 // NaN
-(() => 0) * 6 // NaN
+'Six' * 6 // NaN
+true *
+  (6)[(1, 2)] * // 6
+  6(
+    // NaN
+    () => 0,
+  ) *
+  6 // NaN
 ```
 
 ---
@@ -79,14 +74,13 @@ true * 6 // 6
 // Results can be different than we might expect
 1 + 2 + 3 // 6
 1.0 + 2 + 3 // 6
-1 + "2" + 3 // '123'
-1 + 2 + "3" // '33'
-1 - "2" + 3 // 2
+1 + '2' + 3 // '123'
+1 + 2 + '3' // '33'
+1 - '2' + 3 // 2
 1 + true // 2
 ```
 
-Python
-------
+## Python
 
 - Strongly typed
 - Dynamically typed
@@ -100,8 +94,7 @@ name = "Prof Craton" # Name is a string
 score = name + 1 # TypeError
 ```
 
-C
------
+## C
 
 - Weakly typed
 - Statically typed
@@ -132,8 +125,7 @@ int main(void) {
 }
 ```
 
-Polymorphism
-------------
+## Polymorphism
 
 - We can design code to work with different types
 - This can be achieved in C++ using generics (templates)
@@ -144,25 +136,23 @@ Polymorphism
 #include <iostream>
 
 template <typename Type>
-Type get_min (Type a, Type b) { 
-   return a < b ? a:b; 
+Type get_min (Type a, Type b) {
+   return a < b ? a:b;
 }
 
 int main () {
-   std::cout << get_min(2, 1) << std::endl; 
+   std::cout << get_min(2, 1) << std::endl;
    std::cout << get_min("hello", "world") << std::endl;
 }
 ```
 
-Null
-----
+## Null
 
 - We often want a way to specify something other than the regular return value
 - e.g. popping from and empty stack, dividing by zero, etc
-- *null* is one option, but it can be used differently in different contexts
+- _null_ is one option, but it can be used differently in different contexts
 
-Rust Option
------------
+## Rust Option
 
 > Type Option represents an optional value: every Option is either Some and contains a value, or None, and does not. Option types are very common in Rust code
 
@@ -187,8 +177,7 @@ fn main() {
 }
 ```
 
-Classification of Types
-----------------------
+## Classification of Types
 
 - Booleans
 - Numerics
@@ -196,8 +185,7 @@ Classification of Types
 - Subrange
 - Composite
 
-Enums
------
+## Enums
 
 Introduced in Pascal:
 
@@ -205,8 +193,7 @@ Introduced in Pascal:
 type weekday = (sun, mon, tue, wed, thu, fri, sat);
 ```
 
-Subrange
---------
+## Subrange
 
 Also introduced in Pascal:
 
@@ -214,8 +201,7 @@ Also introduced in Pascal:
 type score = 0..100;
 ```
 
-Composite Types
----------------
+## Composite Types
 
 - Records (structs) - introduced by COBOL
 - Arrays
@@ -223,18 +209,14 @@ Composite Types
 - Lists
 - Files
 
+## Composite Types
 
-Composite Types
----------------
-
-Records (structs)
------------------
+## Records (structs)
 
 - Allows different types to be stored and accessed together
-- Individual *fields* are typically accessed using `.` notation.
+- Individual _fields_ are typically accessed using `.` notation.
 
-Struct Packing
---------------
+## Struct Packing
 
 On most systems, the layout of items in a struct can change the storage space requirements due to alignment constraints.
 
@@ -260,28 +242,24 @@ int main(void) {
 }
 ```
 
-Arrays
-------
+## Arrays
 
 - Used to group a number of items of the same type
 
-Strings
--------
+## Strings
 
 - Most typically an array of characters
 
-Sets
-----
+## Sets
 
-- Store an arbitrary number of *distinct* values of the same type
+- Store an arbitrary number of _distinct_ values of the same type
 
 ```python
 print({1,2,3}) # {1, 2, 3}
 print({1,2,3,3,2,1}) # {1, 2, 3}
 ```
 
-Lists
------
+## Lists
 
 - Hold a number of elements of the same type
 - Typically differ from arrays in their allocation mechanism
@@ -292,23 +270,21 @@ Lists
 Have you ever needed to write code to remove duplicate elements from a list?
 
 > The difference between a bad programmer and a good one is whether they consider their code or their data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
+>
 > - Linus Torvald
 
-Homogeneous types
-----------------
+## Homogeneous types
 
 - Languages may differ in whether they allow different types to be used in certain composite types (e.g. lists and sets)
 - ML and Haskell are homogeneous, many others are heterogeneous
 
-Type Checking
--------------
+## Type Checking
 
 - Type equivalence - Types are the same
 - Type compatibility - Types can be used interchangeably
 - Type Inference - Determining types automatically
 
-Type Equivalence
-----------------
+## Type Equivalence
 
 - Structural equivalence - based on content
 - Name equivalence - based on lexical occurrence of type definitions
@@ -341,11 +317,10 @@ int main() {
 }
 ```
 
-Type Compatibility
-------------------
+## Type Compatibility
 
 - Types don't need to always be fully equivalent to be used
-- *Coercion* is used to convert from one type to another
+- _Coercion_ is used to convert from one type to another
 
 ---
 
@@ -355,8 +330,7 @@ print(1 + 2.0) # 3.0
 print(1 / 2) # 0.5 in Python 3, 0 in Python 2
 ```
 
-Universal Reference Types
--------------------------
+## Universal Reference Types
 
 - Most languages provide a universal reference that can point to any object
 - Examples in include `void` in C, `Object` in Java, and `object` in C#
@@ -392,8 +366,7 @@ int main() {
 }
 ```
 
-Type Inference
---------------
+## Type Inference
 
 - We can determine types without specifying them
 
@@ -433,15 +406,14 @@ fn main() {
     // It just knows that it's a vector (`Vec<_>`)
 
     vec.push(elem);
-    // Aha! Now the compiler knows that 
+    // Aha! Now the compiler knows that
     // `vec` is a vector of `u8`s (`Vec<u8>`)
 
     println!("{:?}", vec);
 }
 ```
 
-Equality Testing
-----------------
+## Equality Testing
 
 - How do we know if you two values are equal?
 - Compare values
@@ -455,8 +427,7 @@ b = {} // Another empty object
 a == b // `false` because they aren't the same empty object
 ```
 
-Shallow vs Deep Compare
------------------------
+## Shallow vs Deep Compare
 
 - Shallow - We check to see if references point to the same object
 - Deep - We check to see if objects hold the same values

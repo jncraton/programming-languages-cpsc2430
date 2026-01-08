@@ -1,17 +1,14 @@
 Wednesday, March 3 - Exam
 
-Scope and Closures
-==================
+# Scope and Closures
 
-Scope
------
+## Scope
 
 (Section 3.3)
 
 The textual region of a program where a binding is active
 
-Scope
------
+## Scope
 
 Can also be used to refer to a region of a program where no bindings are changing
 
@@ -19,13 +16,11 @@ Can also be used to refer to a region of a program where no bindings are changin
 - Functions
 - Modules
 
-Referencing Environment
------------------------
+## Referencing Environment
 
 The set of active bindings
 
-Inspecting the Referencing Environment
---------------------------------------
+## Inspecting the Referencing Environment
 
 ---
 
@@ -52,13 +47,11 @@ Parent: {'sub': <function main.<locals>.sub at 0x7f89903ce268>, 'a': 1}
 
 [repl.it](https://repl.it/@jncraton/python-referencing-env#main.py)
 
-Static (Lexical) Scope
-----------------------
+## Static (Lexical) Scope
 
 Binding can be determined at compile time
 
-Early Basic
------------
+## Early Basic
 
 - Global-only scope
 - No variable declarations
@@ -72,15 +65,13 @@ Early Basic
 30 NEXT X
 ```
 
-Fortran 77
-----------
+## Fortran 77
 
 - Global and subroutine scope
 - Subroutines can't be nested
 - Variable declarations are optional (assumed to be `integer` if name begins with I-N or `real` otherwise)
 
-static variables
-----------------
+## static variables
 
 - Local variable with lifetime covering entire program execution
 - aka `save` in Fortran, `own` in Algol
@@ -104,17 +95,14 @@ int main(void) {
 
 [repl.it](https://repl.it/@jncraton/c-static?lite=true)
 
-
 ---
 
-Nested Subroutines
-------------------
+## Nested Subroutines
 
 - Introduced in Algol 60
 - Allow scopes to nest
 
-Closest Nested Scope Rule
--------------------------
+## Closest Nested Scope Rule
 
 - A name is known in it's scope and nested scopes
 - Unless it is hidden by another name in a nested scope
@@ -139,8 +127,7 @@ int main(void) {
 
 [repl.it](https://repl.it/@jncraton/c-nested-scope)
 
-Built-ins
----------
+## Built-ins
 
 - Many languages define built-ins at an outermost scope level
 - These can be overwritten in certain languages
@@ -157,8 +144,7 @@ print(len("Hello, World"))
 
 [repl.it](https://repl.it/@jncraton/python-builtin-override)
 
-Declaration Order
------------------
+## Declaration Order
 
 - Some languages require the definition exist prior to it being accessed in a block
 - Some languages require all definitions to be present at the start of the block
@@ -181,9 +167,7 @@ Section 3.5
 
 ---
 
-
-Overloading
------------
+## Overloading
 
 Some names can refer to multiple objects at a given time
 
@@ -201,8 +185,7 @@ int main(void) {
 
 [repl.it](https://repl.it/@jncraton/c-overloading)
 
-Polymorphism
-------------
+## Polymorphism
 
 Allows a subroutine to perform differently based on the types involved
 
@@ -227,14 +210,12 @@ int main() {
 
 [repl.it](https://repl.it/@jncraton/cplusplus-overloading)
 
-Modules
--------
+## Modules
 
 - Provide a way to bundle object such as subroutines, variables, and classes together
 - May not be available unless explicitly exported from one module and imported into another
 
-Python Module Example
----------------------
+## Python Module Example
 
 [repl.it](https://repl.it/@jncraton/python-modules)
 
@@ -244,8 +225,7 @@ Section 3.6
 
 ---
 
-First-class Functions
----------------------
+## First-class Functions
 
 - Functions themselves can be used just like any other value
 - They can be passed as a parameter, returned from a function, etc
@@ -265,8 +245,7 @@ call_twice(say_hello)
 
 [repl.it](https://repl.it/@jncraton/python-first-class-functions)
 
-Lambda Expressions
-------------------
+## Lambda Expressions
 
 - Also called anonymous functions, as they may not have a name
 
@@ -282,14 +261,12 @@ print(list(squares))
 
 [repl.it](https://repl.it/@jncraton/python-lambda)
 
-Shallow and Deep Binding
-------------------------
+## Shallow and Deep Binding
 
 - Shallow binding - A referencing environment is bound when the function is finally called
 - Deep binding - A referenceing environment is bound when the reference is created
 
-Closures
---------
+## Closures
 
 - A function and its referencing environment created when a reference to a function is created
 

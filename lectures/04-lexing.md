@@ -1,13 +1,10 @@
-Lexing 2.2
-==========
+# Lexing 2.2
 
-Definition
-----------
+## Definition
 
-> In computer science, lexical analysis, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens 
+> In computer science, lexical analysis, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens
 
-Tokens
-------
+## Tokens
 
 Commonly stored as (name, value) tuples. Example:
 
@@ -23,21 +20,18 @@ Becomes:
 (integer, 17)
 ```
 
-Calculator Example
-------------------
+## Calculator Example
 
-Supported operations
---------------------
+## Supported operations
 
 - `1 + 2`
 - `4 - 2`
 - `2 * 3`
 - `8 / 4`
 
-Goal
-----
+## Goal
 
-- Scan a string such as "1 + 2 * 3" and create a list of (type, value) tuples:
+- Scan a string such as "1 + 2 \* 3" and create a list of (type, value) tuples:
 
 ```python
 (number, 1)
@@ -47,24 +41,23 @@ Goal
 (number, 3)
 ```
 
-Chomsky Hierarchy
------------------
+## Chomsky Hierarchy
 
-Grammar       Automaton (Computer)
-------------- ----------------------
-Unrestricted  Turing Machines
-Context Free  Pushdown Automata
-Regular       Finite State Automata
+Grammar Automaton (Computer)
 
-Regular Languages
------------------
+---
+
+Unrestricted Turing Machines
+Context Free Pushdown Automata
+Regular Finite State Automata
+
+## Regular Languages
 
 - Are insufficient to parse most programming languages
 - Are useful for parsing tokens
 - Can be processed by a simple finite automaton
 
-Deterministic Finite Automaton (DFA)
-------------------------------------
+## Deterministic Finite Automaton (DFA)
 
 - Finite set of states $Q$
 - Finite set of input symbols called the alphabet $\Sigma$
@@ -72,8 +65,7 @@ Deterministic Finite Automaton (DFA)
 - Initial or start state $q_0 \in Q$
 - Set of accept states $F \subseteq Q$
 
-Drawing DFAs
-------------
+## Drawing DFAs
 
 - States are nodes on the graph
 - Start state indicated by arrow
@@ -84,13 +76,11 @@ Drawing DFAs
 
 ![DFA to accept string containing an even number of zeroes](https://upload.wikimedia.org/wikipedia/commons/9/9d/DFAexample.svg)
 
-Regular Expressions
--------------------
+## Regular Expressions
 
 A string used as a search pattern for a member of a regular language.
 
-RE Basics
----------
+## RE Basics
 
 - Characters are generally matched literally.
 
@@ -105,8 +95,7 @@ re.findall("dog", s)
 ['dog']
 ```
 
-RE Boolean Or
--------------
+## RE Boolean Or
 
 - Pipes (|) can be used for boolean or
 
@@ -121,8 +110,7 @@ re.findall("dog|fox", s)
 ['fox', 'dog']
 ```
 
-RE Quantifiers
---------------
+## RE Quantifiers
 
 - `?` - zero or one occurences of preceding element
 - `*` - zero or more occurences of preceding element
@@ -142,8 +130,7 @@ re.findall("ov?", s)
 ['o', 'o', 'ov', 'o']
 ```
 
-RE Grouping
------------
+## RE Grouping
 
 - Parens can be used for grouping
 
@@ -158,8 +145,7 @@ re.findall("(d|f)o(g|x)", s)
 [('fox', 'f', 'x'), ('dog', 'd', 'g')]
 ```
 
-RE Bracket Expressions
-----------------------
+## RE Bracket Expressions
 
 - Brackets `[]` may be used to match a single character against a set of characters
 
@@ -174,8 +160,7 @@ re.findall("[df]o[gx]", s)
 ['fox', 'dog']
 ```
 
-RE Character Classes
---------------------
+## RE Character Classes
 
 Several special character classes are provided:
 
@@ -197,14 +182,12 @@ re.findall("\s...\s", s)
 [' fox ', ' the ']
 ```
 
-DFA RE Equivalence
-------------------
+## DFA RE Equivalence
 
 - A DFA can be created to match any regular expression
 - A regular expression can be created to match a language accepted by any DFA
 
-Simple Lexer in Python
-----------------------
+## Simple Lexer in Python
 
 ```python
 import sys

@@ -1,5 +1,4 @@
-Object-Oriented Programming
-===========================
+# Object-Oriented Programming
 
 ---
 
@@ -7,44 +6,37 @@ Chapter 10
 
 ---
 
-Abstraction
------------
+## Abstraction
 
 - Allows us to hide complexity behind simpler interfaces
 
-Data Abstraction
-----------------
+## Data Abstraction
 
 - Create complex data structures with simple interfaces to pass around (e.g. records, structs, dictionaries, etc)
 
-Control Abstaction
-------------------
+## Control Abstaction
 
 - Create organized sections of executable code that execute in well-understood ways and can be reused
 
-Classes
--------
+## Classes
 
 - Allow programmers to define a group of related abstractions (objects)
 - Programming techniques built around classes are considered object-oriented
 - Combine control and data abstraction
 
-Data Members
-------------
+## Data Members
 
 - Provide data abstraction
 - Hold data used by objects
 - Also known as `fields` or `properties`
 
-Subroutine Members
-------------------
+## Subroutine Members
 
 - Provide control abstraction
 - Subroutines and functions that objects can run
 - Also known as `methods`
 
-Constructors
-------------
+## Constructors
 
 - Called to instantiate class object
 
@@ -58,23 +50,19 @@ class Asset():
     self.maintenance = maintenance
 ```
 
-`this` and `self`
------------------
+## `this` and `self`
 
 - Provide explicit reference to class instance
 
-Why Classes?
-------------
+## Why Classes?
 
 - We can define new abstractions as extensions or refinements of existing abstractions via inheretance
 
-Liskov Substitution Principle
------------------------------
+## Liskov Substitution Principle
 
 > Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
 
-Inheritance Example
--------------------
+## Inheritance Example
 
 ```python
 class Asset:
@@ -109,7 +97,7 @@ class House(Asset):
     >>> int(house.tco(10))
     42848
     """
-    
+
     def __init__(self, value, appreciation=0.02, maintenance=0.02, tax=0.01, utilities=200):
         super().__init__(value, appreciation)
         self.maintenance = maintenance
@@ -163,14 +151,12 @@ if __name__ == '__main__':
 
 Favor composition over inheritance
 
-Inheritance
------------
+## Inheritance
 
 - Represents an **is-a** relationship
 - Encourages chains of inheritance and attempting to fit arbitrary problems into an inheritance model
 
-Composition
------------
+## Composition
 
 - Represents a **has-a** relationship
 - Encourages combining multiple classes as members of one another

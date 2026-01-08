@@ -1,46 +1,38 @@
-Exam Results
-============
+# Exam Results
 
-Programming Language Presentations
-==================================
+# Programming Language Presentations
 
-Target Machine Architecture
-===========================
+# Target Machine Architecture
 
 ---
 
 Much of programming language design involves the interplay between what we'd like our language to be able to do, and what the underlying hardware is able to do.
 
-Compiling for Modern Processors (5.5)
--------------------------------------
+## Compiling for Modern Processors (5.5)
 
 ---
 
 ![Memory Hierarchy](figures/5-1.png)
 
-CPU Pipelining
---------------
+## CPU Pipelining
 
 ![Classic MIPS Pipeline](https://upload.wikimedia.org/wikipedia/commons/2/21/Fivestagespipeline.png)
 
-Pipeline stalls
----------------
+## Pipeline stalls
 
 - Cache misses - Data or intruction may not be immediately available
 - Resource hazards - Two instructions may need the same functional unit
 - Data hazards - An instruction may depend on a data value that hasn't yet been computed
-- Control hazards - Branches may  depend on data that has not yet been computed
+- Control hazards - Branches may depend on data that has not yet been computed
 
-Hardware mitigations
---------------------
+## Hardware mitigations
 
 - Larger caches
 - More functional units
 - Out of order execution
 - Branch prediction
 
-Software mitigations
---------------------
+## Software mitigations
 
 - Restructuring control flow or data layout
 - Instruction reording to minimize load delay
@@ -49,15 +41,13 @@ Software mitigations
 
 ![Filling a load delay slot](figures/5-15.png)
 
-Dependencies
-------------
+## Dependencies
 
 - Flow (read-after-write) - Later instruction depends on output of earlier instruction
 - Anti (write-after-read) - Later instruction overwrites value read by earlier instruction
 - Output (write-after-write) - Later instruction overwrites value written by earlier instruction
 
-Mitigations
------------
+## Mitigations
 
 - Register renaming often resolves anti and output dependencies
 
@@ -65,8 +55,7 @@ Mitigations
 
 ![Register renaming](figures/5-16.png)
 
-Register Allocation
--------------------
+## Register Allocation
 
 - Register usage strongly impacts performance
 - Reorder becomes easier or harder
