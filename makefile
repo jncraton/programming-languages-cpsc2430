@@ -112,6 +112,9 @@ update:
 
 	git add -f gen_lecture_index.py
 
+	# Add new .prettierrc.json
+	git add -f .prettierrc.json
+
 	# Remove old requirements.txt if it exists
 	rm -f requirements.txt
 
