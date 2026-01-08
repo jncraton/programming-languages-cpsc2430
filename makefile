@@ -87,10 +87,10 @@ lectures/reveal.js:
 
 update:
 	wget -q -N https://raw.githubusercontent.com/jncraton/course-template/master/.gitignore \
+	           https://raw.githubusercontent.com/jncraton/course-template/master/.prettierrc.json \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/head.tex \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/makefile \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/reference.docx \
-	           https://raw.githubusercontent.com/jncraton/course-template/master/requirements.txt \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/runtime.md \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/head.md \
 	           https://raw.githubusercontent.com/jncraton/course-template/master/tail.md \
@@ -112,7 +112,14 @@ update:
 
 	git add -f gen_lecture_index.py
 
+	# Remove old requirements.txt if it exists
+	rm -f requirements.txt
+
 	make readme.md
+
+format:
+	npx prettier@3.6.2 --write **.md style.css
+	pipx run --spec black==25.12.0 black gen_lecture_index.py gen_dates.py
 
 clean:
 	rm -rf pandoc*
