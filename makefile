@@ -115,8 +115,8 @@ update:
 	# Add new .prettierrc.json
 	git add -f .prettierrc.json
 
-	# Remove old requirements.txt if it exists
-	rm -f requirements.txt
+	# Remove old files if the exist
+	rm -f requirements.txt formats.md
 
 	make readme.md
 
