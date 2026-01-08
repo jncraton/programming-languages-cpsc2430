@@ -1,32 +1,27 @@
-Programming Languages and Compilers
-===================================
+# Programming Languages and Compilers
 
 Anderson University
 
 Course Number
-  ~ CPSC 2430
+~ CPSC 2430
 
 !INCLUDE "head.md"
 
-Course Catalog Description
---------------------------
+## Course Catalog Description
 
 A survey of programming languages and methods of translation. Topics include programming paradigms, language syntax and lexical analysis, language design choices, and design of compilers.
 
-Required Resources
-------------------
+## Required Resources
 
 - [Course Lecture Notes](https://jncraton.github.io/programming-languages-cpsc2430/lectures/)
 
-Optional Resources
-------------------
+## Optional Resources
 
 - [Programming Language Pragmatics. Scott, M.](https://www.worldcat.org/title/programming-language-pragmatics/oclc/970549610)
 - [Structure and Interpretation of Computer Programs. Abelson, H. Sussman, J.](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 - [Clean Code. Martin, R.C.](https://www.worldcat.org/title/clean-code-a-handbook-of-agile-software-craftmanship/oclc/968264214)
 
-Course objectives
------------------
+## Course objectives
 
 Upon completion of this course, students will be able to:
 
@@ -35,8 +30,7 @@ Upon completion of this course, students will be able to:
 - Articulate the strengths, weaknesses, and history of various language families
 - Write programs in imperative, functional, and declarative languages
 
-Course Overview
----------------
+## Course Overview
 
 Please refer to Canvas for a list of assignments and detailed grading breakdown.
 
