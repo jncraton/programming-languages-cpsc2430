@@ -5,6 +5,8 @@ Anderson University
 Course Number
 ~ CPSC 2430
 
+Anderson University
+
 Term
 ~ Spring 2026
 

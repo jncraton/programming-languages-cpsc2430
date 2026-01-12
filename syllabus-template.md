@@ -1,7 +1,5 @@
 # Programming Languages and Compilers
 
-Anderson University
-
 Course Number
 ~ CPSC 2430
 
