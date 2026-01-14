@@ -1,4 +1,4 @@
-personal_ws-1.1 en 86 
+personal_ws-1.1 en 85 
 ASTs
 Antikythera
 Automata
@@ -49,7 +49,6 @@ fidelitas
 goto
 gotos
 javascript
-labelled
 lexing
 liskov
 makefile
