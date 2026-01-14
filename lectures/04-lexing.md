@@ -70,7 +70,7 @@ Regular Finite State Automata
 - States are nodes on the graph
 - Start state indicated by arrow
 - Accept states indicated by double border
-- Transitions indicated as labelled arrows
+- Transitions indicated as labeled arrows
 
 ---
 
