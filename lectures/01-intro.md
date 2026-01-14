@@ -15,10 +15,6 @@ Anything you want to know?
 
 [Link](https://cpsc2430-programming-languages.netlify.com/)
 
----
-
-![Maslow's Hierarchy of Needs](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/MaslowsHierarchyOfNeeds.svg/640px-MaslowsHierarchyOfNeeds.svg.png)
-
 ## Syllabus
 
 [Link](../syllabus.html)
