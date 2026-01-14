@@ -13,10 +13,6 @@ Anything you want to know?
 
 ## Syllabus
 
-[Link](https://jncraton.github.io/programming-languages-cpsc2430/)
-
-## Syllabus
-
 [Link](../syllabus.html)
 
 ## Quizzes
