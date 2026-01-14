@@ -271,7 +271,7 @@ Have you ever needed to write code to remove duplicate elements from a list?
 
 > The difference between a bad programmer and a good one is whether they consider their code or their data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
 >
-> - Linus Torvald
+> - Linus Torvalds
 
 ## Homogeneous types
 

@@ -264,7 +264,7 @@ print(list(squares))
 ## Shallow and Deep Binding
 
 - Shallow binding - A referencing environment is bound when the function is finally called
-- Deep binding - A referenceing environment is bound when the reference is created
+- Deep binding - A referencing environment is bound when the reference is created
 
 ## Closures
 

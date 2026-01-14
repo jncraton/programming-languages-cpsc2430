@@ -14,7 +14,7 @@ Chapter 10
 
 - Create complex data structures with simple interfaces to pass around (e.g. records, structs, dictionaries, etc)
 
-## Control Abstaction
+## Control Abstraction
 
 - Create organized sections of executable code that execute in well-understood ways and can be reused
 
@@ -56,7 +56,7 @@ class Asset():
 
 ## Why Classes?
 
-- We can define new abstractions as extensions or refinements of existing abstractions via inheretance
+- We can define new abstractions as extensions or refinements of existing abstractions via inheritance
 
 ## Liskov Substitution Principle
 

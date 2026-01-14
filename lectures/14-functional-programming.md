@@ -99,7 +99,7 @@ for (i of [1, 2, 3]) {
 ## Purity
 
 - A function is said to be "pure" if it has no side effects
-- Side effects may inlcude changing global state or performing I/O
+- Side effects may include changing global state or performing I/O
 - Benefits include consistency and testability
 
 ---
@@ -141,7 +141,7 @@ def fib(n):
 
 ## Lisp
 
-- First functional langauge (1958)
+- First functional language (1958)
 - Designed by John McCarthy and implemented by others (Steve Russell created the first working interpreter)
 - Lisp is still used today in various forms (Scheme, Common Lisp, Clojure, etc)
 - Lisp influenced many other modern languages (JavaScript, Python, Ruby, etc)

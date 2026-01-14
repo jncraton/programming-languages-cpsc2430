@@ -112,10 +112,10 @@ re.findall("dog|fox", s)
 
 ## RE Quantifiers
 
-- `?` - zero or one occurences of preceding element
-- `*` - zero or more occurences of preceding element
-- `+` - one or more occurences of preceding element
-- `{n}` - exactly n occurences of preceding element
+- `?` - zero or one occurrences of preceding element
+- `*` - zero or more occurrences of preceding element
+- `+` - one or more occurrences of preceding element
+- `{n}` - exactly n occurrences of preceding element
 
 ---
 

@@ -26,7 +26,7 @@ Chapter 9
 
 - Create complex data structures with simple interfaces to pass around (e.g. records, structs, dictionaries, etc)
 
-## Control Abstaction
+## Control Abstraction
 
 - Create organized sections of executable code that execute in well-understood ways and can be reused
 
@@ -58,7 +58,7 @@ Chapter 9
 ## Pass by Reference
 
 - Actual parameters are references to data from the caller
-- Modifaction of values will impact caller
+- Modification of values will impact caller
 - Should not involve copying data
 
 ## C
@@ -240,7 +240,7 @@ int printf ( const char * format, ... );
 
 - End the function
 - Return some value
-- In langauges without separate statements, the return is simply the value of the function body
+- In languages without separate statements, the return is simply the value of the function body
 - Some languages allow for implicit returns
 
 ---

@@ -4,7 +4,7 @@ Lab questions?
 
 ---
 
-- Provide a construct to yeild successive items
+- Provide a construct to yield successive items
 - Also called enumerators
 
 ---
@@ -52,9 +52,9 @@ for i in [0,1,2,3,4,5,6,7,8,9]:
 
 ## Duck Typing
 
-- We can identify the type of an object by its properities
+- We can identify the type of an object by its properties
 - If it walks like a duck and quacks like a duck, it is a duck
-- We can implement and iterator without inhereting from an iterator class
+- We can implement and iterator without inheriting from an iterator class
 
 ---
 

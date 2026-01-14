@@ -82,7 +82,7 @@ Regular Finite State Automata
 
 - Shift-reduce, bottom-up parse
 - Left-to-right, Rightmost derivation first
-- Deterministic algoritm
+- Deterministic algorithm
 - Linear time performance
 
 ## Calculator Grammar

@@ -20,7 +20,7 @@ Much of programming language design involves the interplay between what we'd lik
 
 ## Pipeline stalls
 
-- Cache misses - Data or intruction may not be immediately available
+- Cache misses - Data or instruction may not be immediately available
 - Resource hazards - Two instructions may need the same functional unit
 - Data hazards - An instruction may depend on a data value that hasn't yet been computed
 - Control hazards - Branches may depend on data that has not yet been computed

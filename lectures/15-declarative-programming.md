@@ -11,9 +11,9 @@ We express the logic of our program without specifying its control flow
 
 ## Examples
 
-- Logic langauges
+- Logic languages
 - Purely functional languages
-- Query langauges
+- Query languages
 - Domain specific languages
 
 ## Logic Programming
@@ -34,7 +34,7 @@ factorial(N,F) :-
    F is N * F1.
 ```
 
-## Query Lanugages
+## Query Languages
 
 - You've likely already encountered SQL
 - This languages allows us to frame requests for data in terms of the data we want, not how it will be retrieved
