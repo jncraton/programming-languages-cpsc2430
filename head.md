@@ -1,5 +1,3 @@
-Anderson University
-
 Term
 ~ Spring 2026
 
