@@ -13,7 +13,7 @@ Anything you want to know?
 
 ## Syllabus
 
-[Link](https://cpsc2430-programming-languages.netlify.com/)
+[Link](https://jncraton.github.io/programming-languages-cpsc2430/)
 
 ## Syllabus
 
