@@ -187,6 +187,21 @@ re.findall("\s...\s", s)
 - A DFA can be created to match any regular expression
 - A regular expression can be created to match a language accepted by any DFA
 
+---
+
+```python
+import re
+
+inputs = [
+    "", "00", "11", "1", "010",
+    "110110110", "00100", "1000000",
+]
+
+for text in inputs:
+    print(f"{text:<9}",
+          re.fullmatch(r"1*(01*01*)*", text) != None)
+```
+
 ## Simple Lexer in Python
 
 ```python
