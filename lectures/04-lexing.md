@@ -47,9 +47,9 @@ Grammar Automaton (Computer)
 
 ---
 
-Unrestricted Turing Machines
-Context Free Pushdown Automata
-Regular Finite State Automata
+1. Unrestricted Turing Machines
+2. Context Free Pushdown Automata
+3. Regular Finite State Automata
 
 ## Regular Languages
 
