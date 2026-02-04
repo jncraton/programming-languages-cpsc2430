@@ -199,7 +199,7 @@ inputs = [
 
 for text in inputs:
     print(f"{text:<9}",
-          re.fullmatch(r"1*(01*01*)*", text) != None)
+        re.fullmatch(r"1*(01*01*)*", text) != None)
 ```
 
 ## Simple Lexer in Python
