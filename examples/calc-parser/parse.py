@@ -1,76 +1,72 @@
 import sys
 import re
 import doctest
+from dataclasses import dataclass, field
+from typing import List, Tuple, Union, Iterable
 
-import pprint
-pp = pprint.PrettyPrinter(indent=2)
+@dataclass
+class Node:
+    type: str
+    value: str = ''
+    children: List['Node'] = field(default_factory=list)
 
-def lex_one(value):
-    """
-    >>> lex_one('123')
-    ('number', '123')
-    >>> lex_one('+')
-    ('operator', '+')
-    >>> lex_one('!')
-    ('postfix_unary_operator', '!')
-    """
-    if re.match(r'\d+', value):
-        return ('number', value)
-    elif re.match(r'[\+\-\*\/]', value):
-        return ('operator', value)
-    elif re.match('!', value):
-        return ('postfix_unary_operator', value)
-    else:
-        raise ValueError(f'Invalid token: {value}')
+    def __repr__(self):
+        if self.children:
+            return f'({self.type} {" ".join(map(repr, self.children))})'
+        return f'{self.value}'
 
-def lex(text):
+def lex(text: str) -> Iterable[Node]:
     """
     >>> list(lex('1 + 2'))
-    [(0, 'number', '1'), (1, 'operator', '+'), (2, 'number', '2')]
+    [1, +, 2]
     """
-    for i, v in enumerate(text.split()):
-        token = lex_one(v)
-        yield (i, token[0], token[1])
+    for v in text.split():
+        if re.match(r'\d+', v):
+            yield Node(type='number', value=v)
+        elif re.match(r'[\+\-\*\/]', v):
+            yield Node(type='operator', value=v)
+        elif re.match('!', v):
+            yield Node(type='postfix_unary_operator', value=v)
+        else:
+            raise ValueError(f'Invalid token: {v}')
 
-def reduce(parse_tree, rules):
+def reduce(stack: List[Node], rules: List[Tuple[str, Tuple[str, ...]]]) -> bool:
     """
-    >>> rules = [('number', ('number', 'operator', 'number'))]
-    >>> tree = [[(0, 'number', '1')], [(1, 'operator', '+')], [(2, 'number', '2')]]
-    >>> reduce(tree, rules)
+    >>> rules = [('expr', ('number', 'operator', 'number'))]
+    >>> stack = [Node('number', '1'), Node('operator', '+'), Node('number', '2')]
+    >>> reduce(stack, rules)
     True
-    >>> tree
-    [[(1, 'number'), [(0, 'number', '1')], [(1, 'operator', '+')], [(2, 'number', '2')]]]
+    >>> stack
+    [(expr 1 + 2)]
     """
     for lhs, rhs in rules:
-        if tuple([t[0][1] for t in parse_tree[-len(rhs):]]) == rhs:
-            # Create new root
-            root = (parse_tree[1][0][0], lhs)
-            children = reversed([parse_tree.pop() for i in range(len(rhs))])
-
-            parse_tree.append([root] + list(children))
+        if len(stack) < len(rhs):
+            continue
+        
+        stack_types = tuple(node.type for node in stack[-len(rhs):])
+        if stack_types == rhs:
+            children = [stack.pop() for _ in range(len(rhs))]
+            new_node = Node(type=lhs, children=list(reversed(children)))
+            stack.append(new_node)
             return True
+    return False
 
-def parse(tokens, rules):
+def parse(tokens: Iterable[Node], rules: List[Tuple[str, Tuple[str, ...]]]) -> Node:
     """
     >>> rules = [('number', ('number', 'operator', 'number'))]
     >>> parse(lex('1 + 2'), rules)
-    [[(1, 'number'), [(0, 'number', '1')], [(1, 'operator', '+')], [(2, 'number', '2')]]]
+    (number 1 + 2)
     """
-    
-    parse_tree = []
-
+    stack = []
     for token in tokens:
-        # Shift token on to parse tree
-        parse_tree.append([token])
-
-        # Reduce tokens matching production rules
-        while reduce(parse_tree, rules): pass
-            
-
-    if len(parse_tree) != 1:
+        stack.append(token)
+        while reduce(stack, rules):
+            pass
+    
+    if len(stack) != 1:
         raise ValueError('Invalid Expression')
-
-    return parse_tree
+    
+    return stack[0]
 
 if __name__ == '__main__':
     doctest.testmod()
@@ -79,5 +75,4 @@ if __name__ == '__main__':
             ('number', ('number', 'operator', 'number')),
             ('number', ('number', 'postfix_unary_operator')),
         ]
-        
-        pp.pprint(parse(lex(sys.argv[1]), rules))
+        print(parse(lex(sys.argv[1]), rules))
