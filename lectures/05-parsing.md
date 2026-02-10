@@ -87,12 +87,22 @@ Regular Finite State Automata
 
 ## Calculator Grammar
 
-There is just one rule:
+- expr -> number
+- expr -> expr operator expr
 
-- number -> number operator number
+---
 
-This rule can generate all strings that are a member of the language.
+## Shift-Reduce Trace
 
-## Tokens
+Parsing "1 + 2"
 
-Note that we are currently operating on tokens. We would need additional rules to operate directly on strings, but the lexer has already taken care of ensuring that we only have valid tokens.
+```
+Shift:  1
+Reduce: (expr 1)
+Shift:  +
+Shift:  2
+Reduce: (expr 2)
+Reduce: (expr (expr 1) + (expr 2))
+```
+
+Result: `(expr (expr 1) + (expr 2))`
