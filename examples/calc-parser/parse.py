@@ -25,6 +25,7 @@ def lex(text: str) -> Iterable[Node]:
     """
     >>> list(lex('1+2'))
     [1, +, 2]
+
     >>> list(lex('1 $ 2'))
     Traceback (most recent call last):
     ...
@@ -83,6 +84,7 @@ def parse(tokens: Iterable[Node], rules: List[Rule], trace: bool = False) -> Nod
     >>> rules = [Rule('expr', ('number',)), Rule('expr', ('expr', 'operator', 'expr'))]
     >>> parse(lex('1 + 2'), rules)
     (expr (expr 1) + (expr 2))
+
     >>> parse(lex('1 +'), rules)
     Traceback (most recent call last):
     ...
