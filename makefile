@@ -50,7 +50,7 @@ env.html: env.md
 	pandoc -V lang=en --metadata pagetitle=Environment --standalone --css=style.css -o $@ $<
 
 lectures:
-	find lectures -name "*.md" -exec pandoc --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js -t revealjs --standalone --template=revealjs-template.html -V revealjs-url=reveal.js -V theme:white -V history=true --metadata pagetitle=Slides -o "{}.html" "{}" \;
+	find lectures -name "*.md" | parallel pandoc --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js -t revealjs --standalone --template=revealjs-template.html -V revealjs-url=reveal.js -V theme:white -V history=true --metadata pagetitle=Slides -o "{}.html" "{}" \;
 	for file in lectures/*.md.html; do \
 	    mv -- "$$file" "$$(echo $$file | sed 's/.md//')"; \
 	done
