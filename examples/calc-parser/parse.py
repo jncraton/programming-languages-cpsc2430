@@ -5,6 +5,11 @@ from dataclasses import dataclass, field
 from typing import List, Tuple, Union, Iterable
 
 @dataclass
+class Rule:
+    lhs: str
+    rhs: Tuple[str, ...]
+
+@dataclass
 class Node:
     type: str
     value: str = ''
@@ -21,50 +26,58 @@ def lex(text: str) -> Iterable[Node]:
     [1, +, 2]
     """
     for v in text.split():
-        if re.match(r'\d+', v):
+        if re.fullmatch(r'\d+', v):
             yield Node(type='number', value=v)
-        elif re.match(r'[\+\-\*\/]', v):
+        elif re.fullmatch(r'[\+\-\*\/]', v):
             yield Node(type='operator', value=v)
-        elif re.match('!', v):
-            yield Node(type='postfix_unary_operator', value=v)
         else:
             raise ValueError(f'Invalid token: {v}')
 
-def reduce(stack: List[Node], rules: List[Tuple[str, Tuple[str, ...]]]) -> bool:
+def reduce(stack: List[Node], rules: List[Rule]) -> bool:
     """
-    >>> rules = [('expr', ('number', 'operator', 'number'))]
-    >>> stack = [Node('number', '1'), Node('operator', '+'), Node('number', '2')]
+    >>> rules = [Rule('expr', ('number',)), Rule('expr', ('expr', 'operator', 'expr'))]
+    >>> stack = [Node('number', '1')]
     >>> reduce(stack, rules)
     True
     >>> stack
-    [(expr 1 + 2)]
+    [(expr 1)]
+    >>> stack.extend([Node('operator', '+'), Node('number', '2')])
+    >>> reduce(stack, rules)
+    True
+    >>> stack
+    [(expr 1), +, (expr 2)]
+    >>> reduce(stack, rules)
+    True
+    >>> stack
+    [(expr (expr 1) + (expr 2))]
     """
-    for lhs, rhs in rules:
-        if len(stack) < len(rhs):
+    for rule in rules:
+        if len(stack) < len(rule.rhs):
             continue
         
-        stack_types = tuple(node.type for node in stack[-len(rhs):])
-        if stack_types == rhs:
-            children = [stack.pop() for _ in range(len(rhs))]
-            new_node = Node(type=lhs, children=list(reversed(children)))
-            stack.append(new_node)
+        if tuple(node.type for node in stack[-len(rule.rhs):]) == rule.rhs:
+            children = stack[-len(rule.rhs):]
+            del stack[-len(rule.rhs):]
+            stack.append(Node(type=rule.lhs, children=children))
             return True
     return False
 
-def parse(tokens: Iterable[Node], rules: List[Tuple[str, Tuple[str, ...]]]) -> Node:
+def parse(tokens: Iterable[Node], rules: List[Rule], trace: bool = False) -> Node:
     """
-    >>> rules = [('number', ('number', 'operator', 'number'))]
+    >>> rules = [Rule('expr', ('number',)), Rule('expr', ('expr', 'operator', 'expr'))]
     >>> parse(lex('1 + 2'), rules)
-    (number 1 + 2)
+    (expr (expr 1) + (expr 2))
     """
     stack = []
     for token in tokens:
         stack.append(token)
+        if trace: print(f'Shift:  {token}')
+        
         while reduce(stack, rules):
-            pass
+            if trace: print(f'Reduce: {stack[-1]}')
     
     if len(stack) != 1:
-        raise ValueError('Invalid Expression')
+        raise ValueError(f'Invalid Expression: {stack}')
     
     return stack[0]
 
@@ -72,7 +85,7 @@ if __name__ == '__main__':
     doctest.testmod()
     if len(sys.argv) > 1:
         rules = [
-            ('number', ('number', 'operator', 'number')),
-            ('number', ('number', 'postfix_unary_operator')),
+            Rule('expr', ('number',)),
+            Rule('expr', ('expr', 'operator', 'expr')),
         ]
-        print(parse(lex(sys.argv[1]), rules))
+        print(parse(lex(sys.argv[1]), rules, trace=True))
