@@ -22,16 +22,31 @@ class Node:
 
 def lex(text: str) -> Iterable[Node]:
     """
-    >>> list(lex('1 + 2'))
+    >>> list(lex('1+2'))
     [1, +, 2]
+    >>> list(lex('1 $ 2'))
+    Traceback (most recent call last):
+    ...
+    ValueError: Invalid token: $
     """
-    for v in text.split():
-        if re.fullmatch(r'\d+', v):
-            yield Node(type='number', value=v)
-        elif re.fullmatch(r'[\+\-\*\/]', v):
-            yield Node(type='operator', value=v)
+    token_rules = [
+        ('number', r'\d+'),
+        ('operator', r'[-+*/]'),
+        ('whitespace', r'\s+'),
+    ]
+
+    i = 0
+    while i < len(text):
+        for token_type, rule in token_rules:
+            match = re.match(rule, text[i:])
+            if match:
+                value = match.group()
+                if token_type != 'whitespace':
+                    yield Node(token_type, value)
+                i += len(value)
+                break
         else:
-            raise ValueError(f'Invalid token: {v}')
+            raise ValueError(f'Invalid token: {text[i]}')
 
 def reduce(stack: List[Node], rules: List[Rule]) -> bool:
     """
