@@ -6,11 +6,13 @@ from typing import List, Tuple, Union, Iterable
 
 @dataclass
 class Rule:
+    """A grammar rule mapping a left-hand side name to a right-hand side tuple"""
     lhs: str
     rhs: Tuple[str, ...]
 
 @dataclass
 class Node:
+    """A node in the parse tree or a token"""
     type: str
     value: str = ''
     children: List['Node'] = field(default_factory=list)
@@ -23,6 +25,8 @@ class Node:
 
 def lex(text: str) -> Iterable[Node]:
     """
+    Generate tokens from input text
+
     >>> list(lex('1+2'))
     [1, +, 2]
 
@@ -52,6 +56,8 @@ def lex(text: str) -> Iterable[Node]:
 
 def reduce(stack: List[Node], rules: List[Rule]) -> bool:
     """
+    Attempt to reduce the top of the stack using grammar rules
+
     >>> rules = [Rule('expr', ('number',)), Rule('expr', ('expr', 'operator', 'expr'))]
     >>> stack = [Node('number', '1')]
     >>> reduce(stack, rules)
@@ -81,6 +87,8 @@ def reduce(stack: List[Node], rules: List[Rule]) -> bool:
 
 def parse(tokens: Iterable[Node], rules: List[Rule], trace: bool = False) -> Node:
     """
+    Perform a shift-reduce parse of tokens using the given grammar rules
+
     >>> rules = [Rule('expr', ('number',)), Rule('expr', ('expr', 'operator', 'expr'))]
     >>> parse(lex('1 + 2'), rules)
     (expr (expr 1) + (expr 2))
