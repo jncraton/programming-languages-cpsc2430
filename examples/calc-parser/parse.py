@@ -14,6 +14,7 @@ class Node:
     type: str
     value: str = ''
     children: List['Node'] = field(default_factory=list)
+    pos: int = 0
 
     def __repr__(self):
         if self.children:
@@ -27,7 +28,7 @@ def lex(text: str) -> Iterable[Node]:
     >>> list(lex('1 $ 2'))
     Traceback (most recent call last):
     ...
-    ValueError: Invalid token: $
+    ValueError: Invalid token at position 2: $
     """
     token_rules = [
         ('number', r'\d+'),
@@ -42,11 +43,11 @@ def lex(text: str) -> Iterable[Node]:
             if match:
                 value = match.group()
                 if token_type != 'whitespace':
-                    yield Node(token_type, value)
+                    yield Node(token_type, value, pos=i)
                 i += len(value)
                 break
         else:
-            raise ValueError(f'Invalid token: {text[i]}')
+            raise ValueError(f'Invalid token at position {i}: {text[i]}')
 
 def reduce(stack: List[Node], rules: List[Rule]) -> bool:
     """
@@ -92,7 +93,8 @@ def parse(tokens: Iterable[Node], rules: List[Rule], trace: bool = False) -> Nod
             if trace: print(f'Reduce: {stack[-1]}')
     
     if len(stack) != 1:
-        raise ValueError(f'Invalid Expression: {stack}')
+        pos = stack[1].pos if len(stack) > 1 else 0
+        raise ValueError(f'Invalid Expression at position {pos}: {stack}')
     
     return stack[0]
 
