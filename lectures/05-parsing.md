@@ -47,13 +47,13 @@ Regular Finite State Automata
 
 ---
 
-![Parse tree](https://connectiongrammar.netlify.com/docs/english-parse-example.png)
+![Parse tree](figures/english-parse.svg){height=540px}
 
 ## Implementing a parser
 
 ---
 
-![Parse tree example](https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Parse_Tree_Example.svg/525px-Parse_Tree_Example.svg.png)
+![Parse tree example](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Parse_Tree_Example.svg/960px-Parse_Tree_Example.svg.png){height=540px}
 
 ## Top-down parsing
 
@@ -62,7 +62,8 @@ Regular Finite State Automata
 
 ---
 
-![Top-down parse](https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Top-down_Parse_Tree_Order.svg/495px-Top-down_Parse_Tree_Order.svg.png)
+
+![Top-down parse](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Top-down_Parse_Tree_Order.svg/960px-Top-down_Parse_Tree_Order.svg.png){height=540px}
 
 ## Bottom-up parsing
 
@@ -70,7 +71,7 @@ Regular Finite State Automata
 
 ---
 
-![Bottom-up parse](https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Bottom-up_Parse_Tree_Order.svg/501px-Bottom-up_Parse_Tree_Order.svg.png)
+![Bottom-up parse](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bottom-up_Parse_Tree_Order.svg/960px-Bottom-up_Parse_Tree_Order.svg.png){height=540px}
 
 ## Shift-reduce parsing
 
