@@ -118,8 +118,6 @@ int main(void) {
 }
 ```
 
-[repl.it factorial example](https://repl.it/@jncraton/c-factorial)
-
 ## Calling Sequence
 
 - Prolog - Executed initially to prepare the stack
