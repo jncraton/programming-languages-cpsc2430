@@ -1,0 +1,18 @@
+type	name	reading	content
+lecture	Intro	Introduction	Computational Thinking
+lecture	History	History	Evolution of Languages
+lecture	Compilation	Compilation	Compilers, Interpreters, Static Analysis
+lecture	Lexing	Scanning	Lexemes, Tokens, Regular Expressions
+lecture	Parsing	Parsing	Grammars, Syntax Trees
+lecture	Binding	Names	Scope, Lifetime, Symbols
+lecture	Scope and Closures	Names	Functions, Environment, Closures
+exam	Midterm Exam
+lecture	Target Machine Architecture	Architecture	Memory, CPU, Instructions
+lecture	Control Flow	Control	Expressions, Selection, Iteration
+lecture	Iterators	Control	Iteration Patterns, Generators
+lecture	Type Systems	Types	Type Checking, Polymorphism
+lecture	Control Abstraction	Subroutines	Functions, Parameters, Stack
+lecture	Object Oriented Programming	Objects	Classes, Inheritance, Encapsulation
+lecture	Functional Programming	Functional	Recursion, Higher Order Functions
+lecture	Declarative Programming	Logic	Rules, Constraints, Logic Programming
+lecture	Review	None	Summary, Synthesis
