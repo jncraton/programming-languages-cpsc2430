@@ -1,6 +1,6 @@
 all: hello
 
-hello: hello.c
+%: %.c
 	gcc $< -o $@
 
 clean:
