@@ -1,4 +1,4 @@
-Wednesday, March 3 - Exam
+Exam in lab, Thursday, March 5th
 
 # Scope and Closures
 
