@@ -45,8 +45,6 @@ Locals: {'c': 3, 'b': 2}
 Parent: {'sub': <function main.<locals>.sub at 0x7f89903ce268>, 'a': 1}
 ```
 
-[repl.it](https://repl.it/@jncraton/python-referencing-env#main.py)
-
 ## Static (Lexical) Scope
 
 Binding can be determined at compile time
@@ -93,8 +91,6 @@ int main(void) {
 }
 ```
 
-[repl.it](https://repl.it/@jncraton/c-static?lite=true)
-
 ---
 
 ## Nested Subroutines
@@ -125,8 +121,6 @@ int main(void) {
 }
 ```
 
-[repl.it](https://repl.it/@jncraton/c-nested-scope)
-
 ## Built-ins
 
 - Many languages define built-ins at an outermost scope level
@@ -141,8 +135,6 @@ def len(str):
 
 print(len("Hello, World"))
 ```
-
-[repl.it](https://repl.it/@jncraton/python-builtin-override)
 
 ## Declaration Order
 
@@ -183,8 +175,6 @@ int main(void) {
 }
 ```
 
-[repl.it](https://repl.it/@jncraton/c-overloading)
-
 ## Polymorphism
 
 Allows a subroutine to perform differently based on the types involved
@@ -208,16 +198,12 @@ int main() {
 }
 ```
 
-[repl.it](https://repl.it/@jncraton/cplusplus-overloading)
-
 ## Modules
 
 - Provide a way to bundle object such as subroutines, variables, and classes together
 - May not be available unless explicitly exported from one module and imported into another
 
 ## Python Module Example
-
-[repl.it](https://repl.it/@jncraton/python-modules)
 
 ---
 
@@ -243,8 +229,6 @@ def say_hello():
 call_twice(say_hello)
 ```
 
-[repl.it](https://repl.it/@jncraton/python-first-class-functions)
-
 ## Lambda Expressions
 
 - Also called anonymous functions, as they may not have a name
@@ -258,8 +242,6 @@ squares = map(lambda n: n*n, nums)
 
 print(list(squares))
 ```
-
-[repl.it](https://repl.it/@jncraton/python-lambda)
 
 ## Shallow and Deep Binding
 
@@ -284,5 +266,3 @@ print(p(1))
 import inspect
 print(inspect.getclosurevars(p))
 ```
-
-[repl.it](https://repl.it/@jncraton/python-closure)
