@@ -100,8 +100,7 @@ int main(void) {
 
 ## Closest Nested Scope Rule
 
-- A name is known in it's scope and nested scopes
-- Unless it is hidden by another name in a nested scope
+- A name is known in its scope and in nested scopes unless it is hidden by another name in a nested scope
 
 ---
 
