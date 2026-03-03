@@ -162,18 +162,6 @@ Section 3.5
 
 Some names can refer to multiple objects at a given time
 
----
-
-```c
-#include <stdio.h>
-
-int main(void) {
-  // Overloaded division operator works with both ints and floats
-  printf("%f\n", (float)(5/2));
-  printf("%f\n", (float)(5/2.0));
-}
-```
-
 ## Polymorphism
 
 Allows a subroutine to perform differently based on the types involved
