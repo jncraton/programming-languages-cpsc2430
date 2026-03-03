@@ -1,4 +1,4 @@
-BINS=static
+BINS=static nested undeclared
 
 all: $(BINS)
 
