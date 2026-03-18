@@ -1,5 +1,3 @@
-# Exam Results
-
 # Programming Language Presentations
 
 # Target Machine Architecture
