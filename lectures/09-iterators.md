@@ -1,5 +1,3 @@
-Lab questions?
-
 # Iterators
 
 ---
