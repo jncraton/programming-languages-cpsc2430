@@ -56,12 +56,42 @@ for i in [0,1,2,3,4,5,6,7,8,9]:
 
 ---
 
-Python `range` [implementation](https://replit.com/@jncraton/range#main.py).
+```python
+def range(start, stop=None, step=1):
+    if stop == None:
+        stop = start
+        start = 0
+
+    current = start
+
+    results = []
+
+    while current < stop:
+        results.append(current)
+        current += step
+
+    return results
+```
 
 ## Generators
 
 - Provide a generalized construct for creating iterators
 - We can `yield` successive values
+
+---
+
+```python
+def range(start, stop=None, step=1):
+    if stop == None:
+        stop = start
+        start = 0
+    
+    current = start
+    
+    while current < stop:
+        yield current
+        current += step
+```
 
 ---
 
