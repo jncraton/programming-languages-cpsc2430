@@ -11,4 +11,4 @@ all:
 	rustc $<
 
 clean:
-	rm -f error crash poly option eq
+	rm -f error crash poly option eq void
