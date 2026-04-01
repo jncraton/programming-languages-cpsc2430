@@ -305,9 +305,6 @@ typedef struct {
   int inner;
 } ContainerB;
 
-// Needs to be:
-//typedef ContainerA ContainerB;
-
 void increment(ContainerB* container) {
   container->inner += 1;
 }
