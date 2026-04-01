@@ -392,7 +392,7 @@ int main() {
 
 ---
 
-Some languages are statically typed while having very powerful type inference such that explicit types are rarely required. Examples are ML, Haskell, and Rust.
+Some languages are statically typed while providing type inference such that explicit types are rarely required. Examples are ML, Haskell, and Rust.
 
 ---
 
