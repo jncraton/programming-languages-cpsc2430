@@ -11,4 +11,4 @@ all:
 	rustc $<
 
 clean:
-	rm -f error crash poly option eq void auto inference
+	rm -f error crash poly option eq void auto inference compare
