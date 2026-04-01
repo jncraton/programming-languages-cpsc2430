@@ -436,6 +436,8 @@ a == b // `false` because they aren't the same empty object
 
 ```c
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 void main(void) {
   char * a = malloc(6);
@@ -455,6 +457,5 @@ void main(void) {
   printf("%d\n", strcmp(a, a) == 0); // True
   printf("%d\n", strcmp(a, b) == 0); // False
   printf("%d\n", strcmp(a, "Alice") == 0); // True
-
 }
 ```
