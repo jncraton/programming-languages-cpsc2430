@@ -36,17 +36,17 @@ Chapters 7 & 8
 
 ## Strong Typing
 
-A language enforces valid types and operations
+Strictly enforces valid types and operations
 
 ## Static Typing
 
-A language is strongly typed and rules are enforced at compile time
+Type rules are enforced at compile time
 
 ## Example Languages
 
 - Javascript - weak/dynamic
 - Python - strong/dynamic
-- C - weak/static (types can be coerced)
+- C - weak/static (types can be coerced, pointer casting, bounds checking, etc)
 - Java - strong/static
 
 ## JavaScript
