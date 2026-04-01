@@ -153,7 +153,7 @@ int main() {
 
 - We often want a way to specify something other than the regular return value
 - e.g. popping from and empty stack, dividing by zero, etc
-- _null_ is one option, but it can be used differently in different contexts
+- `null` is one option, but it can be used differently in different contexts
 
 ## Rust Option
 
