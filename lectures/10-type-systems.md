@@ -58,14 +58,10 @@ Type rules are enforced at compile time
 
 ```js
 // None of these are runtime errors
-'Six' * 6 // NaN
-true *
-  (6)[(1, 2)] * // 6
-  6(
-    // NaN
-    () => 0,
-  ) *
-  6 // NaN
+"Six" * 6 // NaN
+true * 6 // 6
+[1,2] * 6 // NaN
+(() => 0) * 6 // NaN
 ```
 
 ---
@@ -77,6 +73,7 @@ true *
 1 + '2' + 3 // '123'
 1 + 2 + '3' // '33'
 1 - '2' + 3 // 2
+1 + '2' - 3 // 9
 1 + true // 2
 ```
 
