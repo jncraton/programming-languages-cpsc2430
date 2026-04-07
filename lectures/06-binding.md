@@ -1,10 +1,8 @@
+---
+reading: 'Chapter 3: Scope and Binding'
+...
+
 # Binding
-
----
-
-Section 3.1
-
----
 
 ## Names
 

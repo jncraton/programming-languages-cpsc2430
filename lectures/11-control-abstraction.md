@@ -1,12 +1,11 @@
+---
+reading: 'Chapter 9: Subroutines and Control Abstraction'
+...
+
+
 Enum lab questions?
 
 # Control Abstraction
-
----
-
-Chapter 9
-
----
 
 ## Abstraction
 

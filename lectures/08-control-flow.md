@@ -1,10 +1,8 @@
+---
+reading: 'Chapter 6: Control Flow'
+...
+
 # Control Flow
-
----
-
-Chapter 6
-
----
 
 ## Control Flow
 

@@ -1,10 +1,8 @@
+---
+reading: 'Chapter 7: Type Systems, Chapter 8: Composite Types'
+...
+
 # Type Systems
-
----
-
-Chapters 7 & 8
-
----
 
 ## Purpose
 

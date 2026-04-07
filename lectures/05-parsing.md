@@ -1,3 +1,7 @@
+---
+reading: 'Chapter 2.3: Parsing'
+...
+
 Lexing lab questions?
 
 # Parsing 2.3

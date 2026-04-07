@@ -1,3 +1,7 @@
+---
+reading: 'Chapter 2.2: Scanning'
+...
+
 # Lexing 2.2
 
 ## Definition
