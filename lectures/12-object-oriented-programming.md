@@ -1,10 +1,8 @@
+---
+reading: 'Chapter 10: Object-Oriented Programming'
+...
+
 # Object-Oriented Programming
-
----
-
-Chapter 10
-
----
 
 ## Abstraction
 
