@@ -4,6 +4,8 @@ reading: 'Chapter 10: Object-Oriented Programming'
 
 # Final Exam
 
+---
+
 ![Exam Schedule](https://anderson.edu/wp-content/uploads/ExamSchedule20252026.pdf)
 
 # Object-Oriented Programming
