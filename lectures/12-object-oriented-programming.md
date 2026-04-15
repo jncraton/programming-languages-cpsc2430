@@ -6,7 +6,8 @@ reading: 'Chapter 10: Object-Oriented Programming'
 
 ---
 
-![Exam Schedule](https://anderson.edu/wp-content/uploads/ExamSchedule20252026.pdf)
+- [Exam Schedule](https://anderson.edu/wp-content/uploads/ExamSchedule20252026.pdf)
+- CPSC 2430 exam will be 3pm on Tuesday, May 5th
 
 # Object-Oriented Programming
 
