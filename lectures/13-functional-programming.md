@@ -18,7 +18,7 @@ In modern languages, the lines between language families often have overlap
 
 ## First-class Functions
 
-- Functions can be passed as values
+Functions can be passed as values
 
 ## Higher Order Functions
 
@@ -137,7 +137,7 @@ def fib(n):
 ## Lambda Calculus
 
 - Formal mathematical basis for computation introduced by Alonozo Church
-- Provably equivalent to a Turing Machine (see Church-Turing thesis)
+- Provably equivalent to a Turing Machine ([Church-Turing thesis](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis))
 - Not a programming language, but provides framework for computation and functional programming
 
 ## Lisp
@@ -166,6 +166,8 @@ def fib(n):
 - Includes first-class functions and closures
 
 ---
+
+Self-passing
 
 ```js
 console.log(
