@@ -2,7 +2,6 @@
 reading: 'Chapter 11: Functional Languages'
 ...
 
-
 # Functional Languages
 
 ---
