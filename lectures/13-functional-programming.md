@@ -1,8 +1,9 @@
-# Functional Languages
-
 ---
+reading: 'Chapter 11: Functional Languages'
+...
 
-Chapter 11
+
+# Functional Languages
 
 ---
 
