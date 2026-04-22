@@ -164,5 +164,3 @@ def fib(n):
 - This project quickly shifted to the creation of Javascript
 - Glue language with Java syntax
 - Includes first-class functions and closures
-
-## JS Example
