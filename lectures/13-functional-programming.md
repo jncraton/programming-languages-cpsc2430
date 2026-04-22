@@ -14,7 +14,7 @@ reading: 'Chapter 11: Functional Languages'
 
 ---
 
-In modern languages, the lines between language families and often have a lot of overlap.
+In modern languages, the lines between language families often have overlap
 
 ## First-class Functions
 
