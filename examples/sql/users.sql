@@ -31,24 +31,37 @@ insert into messages values
   (4,'Ah. Thanks!'),
   (1,'No problem.');
 
+select "
+  Display messages in order";
 select userid, content
   from messages;
 
 
+select "
+  Display messages with usernames";
+
 select name, content
   from messages
   natural join users;
+
+select "
+  Display messages with usernames in reverse order";
 
 select name, content
   from messages
   natural join users
   order by messages.rowid desc;
 
+select "
+  Show Dan's messages using a `where` clause";
+
 select name, content
   from messages
   natural join users
   where name='Dan';
 
+select "
+  Show query plan (imperative program to complete query)";
 explain query plan
 select name, content
   from messages
