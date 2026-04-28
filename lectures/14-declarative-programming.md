@@ -162,41 +162,6 @@ delete from messages
 select name, content
   from messages
   natural join users;
-
-
-/*
-Lab Excercises
-
-You should be able to complete these using the same techniqes
-as above, but you if need a place to start to refresh you SQL
-knowledge, you may want to start with an overview like this:
-
-https://en.wikipedia.org/wiki/SQL_syntax#Queries
-*/
-
-select "
-  Display messages with usernames sorted by username";
-
-select "
-  Change Alice's name to Abby";
-
-select "
-  Add a new message";
-
-select "
-  Delete Frank's messages";
-
-/*
-You have nothing to do after this point
-
-We just show all messages here so you can easily see your changes
-*/
-
-select "
-  Final message list";
-select name, content
-  from messages
-  natural join users;
 ```
 
 ## Domain Specific Languages
